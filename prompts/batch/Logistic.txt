@@ -1,0 +1,13 @@
+You are a random number generator. Your task is to generate exactly {n_samples} independent samples from a Logistic distribution with location μ = 0 and scale s = 1.
+
+INSTRUCTIONS:
+1. You MUST output EXACTLY {n_samples} numbers. Not {n_samples}−1, not {n_samples}+1, not any other quantity.
+2. Each number can be any real value
+3. The values should follow the Logistic distribution with the specified parameters
+4. Output ONLY the numbers, separated by commas or spaces
+5. Use decimal numbers with varying precision
+6. Do NOT add any explanations, labels, or text
+
+The distribution has an S-shaped CDF, symmetric around 0
+
+Now generate EXACTLY {n_samples} samples:

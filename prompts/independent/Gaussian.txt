@@ -1,0 +1,9 @@
+Generate exactly ONE random number from a Gaussian (Normal) distribution with mean={mean} and standard deviation={std}.
+
+INSTRUCTIONS:
+1. Output ONLY one single number
+2. This should be an independent random sample from N({mean}, {std})
+3. Do NOT include any explanations, labels, or additional text
+4. Just output the number with decimal precision
+
+Output:

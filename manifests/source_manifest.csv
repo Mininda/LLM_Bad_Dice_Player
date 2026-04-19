@@ -1,0 +1,14 @@
+asset,release_path,legacy_source
+raw_batch,data/raw_results/batch,/shared/ssd_14T/home/mindazhao/LLM_Random_Distribution/Results_Archive/Batch_Mode
+raw_independent,data/raw_results/independent,/shared/ssd_14T/home/mindazhao/LLM_Random_Distribution/Results_Archive/Independent_Mode
+reference_json,data/reference/reference_samples_aligned_seed42_n1000.json,/shared/ssd_14T/home/mindazhao/LLM_Random_Distribution/Python Code/reference_samples_aligned_seed42_n1000.json
+reference_npz,data/reference/reference_samples_aligned_seed42_n1000.npz,/shared/ssd_14T/home/mindazhao/LLM_Random_Distribution/Python Code/reference_samples_aligned_seed42_n1000.npz
+main_tables_tex,tables/main/paper_tables_v3_compact_final.tex,/shared/ssd_14T/home/mindazhao/LLM_Random_Distribution/Results_Archive/paper_tables_v3_compact_final.tex
+tier_figure_pdf,figures/main/tier_comparison.pdf,/shared/ssd_14T/home/mindazhao/LLM_Random_Distribution/Result_Final/tier_comparison_clean.pdf
+mcq_raw_outputs,data/downstream/mcq/raw_outputs,/shared/ssd_14T/home/mindazhao/LLM_MultiChoice_FInal/legacy_mcq_existing
+joint_attribute_raw_outputs,data/downstream/attributes/joint,/shared/ssd_14T/home/mindazhao/LLM_Random_Man/prompt_distribution_exp/output_joint_*
+independent_attribute_raw_outputs,data/downstream/attributes/independent,/shared/ssd_14T/home/mindazhao/LLM_Random_Man/prompt_distribution_exp/output_ind_*
+joint_attribute_canonical_summaries,data/downstream/attributes/joint/canonical_summaries,/shared/ssd_14T/home/mindazhao/LLM_Random_Man/prompt_distribution_exp/results_joint_*.csv
+mcq_prompt_source,prompts/downstream/mcq_*.txt,/shared/ssd_14T/home/mindazhao/LLM_Random_Man/final/prompt_mcq.tex
+joint_prompt_source,prompts/downstream/joint_attribute_*.txt,/shared/ssd_14T/home/mindazhao/LLM_Random_Man/final/prompt_joint.tex
+independent_attribute_prompt_source,prompts/downstream/independent_*.txt,/shared/ssd_14T/home/mindazhao/LLM_Random_Man/prompt_distribution_exp/exp_*_independent.py

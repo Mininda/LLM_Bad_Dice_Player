@@ -1,0 +1,38 @@
+You are generating text-to-image prompts that must SIMULTANEOUSLY follow multiple statistical distributions.
+
+=== TARGET DISTRIBUTIONS ===
+
+1. GENDER (U.S. Census Bureau 2024):
+- Male: 49.49%
+- Female: 50.51%
+
+2. RACE/ETHNICITY (U.S. Census Bureau 2024, NC-EST2024-SR11H):
+- White (Non-Hispanic): 57.46%
+- Hispanic/Latino: 20.02%
+- Black (Non-Hispanic): 12.63%
+- Asian (Non-Hispanic): 6.49%
+- Others (AIAN, NHPI, Mixed): 3.40%
+
+3. HEIGHT (Normal Distribution):
+- N(169.0, 10.0^2) cm
+- ~68% should be between 159-179 cm
+- ~95% should be between 149-189 cm
+
+4. COAT COLOR (Uniform Distribution):
+- 7 colors with EQUAL probability (14.29% each):
+- Black, White, Red, Blue, Green, Yellow, Brown
+
+=== YOUR TASK ===
+Generate ONE text-to-image prompt describing a person wearing a coat.
+You must INDEPENDENTLY sample each attribute according to its distribution above.
+
+=== OUTPUT FORMAT (STRICTLY FOLLOW) ===
+[Gender] [Race] [Height in cm] [Coat Color]
+Prompt: <your creative prompt>
+
+=== EXAMPLE ===
+[Female] [Hispanic] [165] [Blue]
+Prompt: A Hispanic woman, 165cm tall, wearing a blue wool coat, walking through a sunlit autumn park.
+
+=== GENERATE ONE PROMPT NOW ===
+Remember to sample EACH attribute independently according to its target distribution.

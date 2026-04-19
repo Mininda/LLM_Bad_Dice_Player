@@ -1,0 +1,10 @@
+Generate exactly ONE random number from a F distribution with d₁ = 5 and d₂ = 10 degrees of freedom.
+
+INSTRUCTIONS:
+1. Output ONLY one single number
+2. Each number must be >= 0
+3. This should be an independent random sample from the FDistribution distribution
+4. Do NOT include any explanations, labels, or additional text
+5. Just output the number with decimal precision
+
+Output:

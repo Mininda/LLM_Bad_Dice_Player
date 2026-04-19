@@ -1,0 +1,9 @@
+Generate exactly ONE random non-negative integer from a Poisson distribution Poisson(λ={lambda_param}).
+
+INSTRUCTIONS:
+1. Output ONLY one single NON-NEGATIVE INTEGER (0, 1, 2, 3, ...)
+2. This represents the count of events with average rate λ={lambda_param}
+3. Do NOT include any explanations or text
+4. Just output the integer
+
+Output:

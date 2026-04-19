@@ -1,0 +1,10 @@
+Generate exactly ONE random number from a Gamma distribution with shape k = 2 and scale θ = 2.
+
+INSTRUCTIONS:
+1. Output ONLY one single number
+2. Each number must be >= 0
+3. This should be an independent random sample from the Gamma distribution
+4. Do NOT include any explanations, labels, or additional text
+5. Just output the number with decimal precision
+
+Output:

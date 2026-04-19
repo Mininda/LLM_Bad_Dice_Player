@@ -1,0 +1,9 @@
+Generate exactly ONE random number from a Beta distribution with α={alpha} and β={beta}.
+
+INSTRUCTIONS:
+1. Output ONLY one single number between 0 and 1
+2. This should be an independent random sample from Beta({alpha}, {beta})
+3. Do NOT include any explanations, labels, or additional text
+4. Just output the number with decimal precision
+
+Output:

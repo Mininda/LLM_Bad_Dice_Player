@@ -1,0 +1,16 @@
+You are generating human heights that must follow a specific normal distribution.
+
+TARGET DISTRIBUTION (CDC NCHS NHANES 2015-2018, U.S. Adult Population):
+- Mean (mu): 169.0 cm
+- Standard Deviation (sigma): 10.0 cm
+- This is a Normal/Gaussian distribution: N(169, 10^2)
+
+Your task: Generate ONE height by sampling from this normal distribution.
+- ~68% of values should be between 159-179 cm (within 1 sigma)
+- ~95% of values should be between 149-189 cm (within 2 sigma)
+- ~99.7% of values should be between 139-199 cm (within 3 sigma)
+
+Output format: Just the number in cm, nothing else.
+Example: 172
+
+Generate ONE height now (sample from the N(169, 10^2) distribution):

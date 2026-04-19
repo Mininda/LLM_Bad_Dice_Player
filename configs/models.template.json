@@ -1,0 +1,82 @@
+{
+  "model_order": [
+    "GPT-5.2",
+    "Gemini-3",
+    "GPT-4o",
+    "DeepSeek-V3.2",
+    "Qwen3",
+    "Gemma-3",
+    "Mistral-3.2",
+    "Kimi-K2",
+    "Llama-3.3",
+    "Llama-4",
+    "GPT-OSS"
+  ],
+  "models": {
+    "GPT-5.2": {
+      "api_model": "gpt-5.2",
+      "provider": "openai_compatible",
+      "api_key_env": "OPENAI_API_KEY",
+      "base_url": null
+    },
+    "Gemini-3": {
+      "api_model": "gemini-3-pro-preview",
+      "provider": "gemini",
+      "api_key_env": "GEMINI_API_KEY"
+    },
+    "GPT-4o": {
+      "api_model": "gpt-4o",
+      "provider": "openai_compatible",
+      "api_key_env": "OPENAI_API_KEY",
+      "base_url": null
+    },
+    "DeepSeek-V3.2": {
+      "api_model": "deepseek-ai/DeepSeek-V3.2-Exp",
+      "provider": "openai_compatible",
+      "api_key_env": "DEEPINFRA_API_KEY",
+      "base_url": "https://api.deepinfra.com/v1/openai"
+    },
+    "Qwen3": {
+      "api_model": "Qwen/Qwen3-32B",
+      "provider": "openai_compatible",
+      "api_key_env": "DEEPINFRA_API_KEY",
+      "base_url": "https://api.deepinfra.com/v1/openai"
+    },
+    "Gemma-3": {
+      "api_model": "google/gemma-3-27b-it",
+      "provider": "openai_compatible",
+      "api_key_env": "DEEPINFRA_API_KEY",
+      "base_url": "https://api.deepinfra.com/v1/openai"
+    },
+    "Mistral-3.2": {
+      "api_model": "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+      "provider": "openai_compatible",
+      "api_key_env": "DEEPINFRA_API_KEY",
+      "base_url": "https://api.deepinfra.com/v1/openai"
+    },
+    "Kimi-K2": {
+      "api_model": "moonshotai/Kimi-K2-Instruct-0905",
+      "provider": "openai_compatible",
+      "api_key_env": "DEEPINFRA_API_KEY",
+      "base_url": "https://api.deepinfra.com/v1/openai"
+    },
+    "Llama-3.3": {
+      "api_model": "meta-llama/Llama-3.3-70B-Instruct",
+      "provider": "openai_compatible",
+      "api_key_env": "DEEPINFRA_API_KEY",
+      "base_url": "https://api.deepinfra.com/v1/openai"
+    },
+    "Llama-4": {
+      "api_model": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
+      "provider": "openai_compatible",
+      "api_key_env": "DEEPINFRA_API_KEY",
+      "base_url": "https://api.deepinfra.com/v1/openai"
+    },
+    "GPT-OSS": {
+      "api_model": "openai/gpt-oss-120b",
+      "provider": "openai_compatible",
+      "api_key_env": "DEEPINFRA_API_KEY",
+      "base_url": "https://api.deepinfra.com/v1/openai"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+You are picking a coat color that must follow a UNIFORM distribution.
+
+TARGET DISTRIBUTION (Uniform):
+Each of the 7 colors should have EQUAL probability: 14.29% each
+- Black: 14.29%
+- White: 14.29%
+- Red: 14.29%
+- Blue: 14.29%
+- Green: 14.29%
+- Yellow: 14.29%
+- Brown: 14.29%
+
+Your task: Pick ONE color by sampling uniformly at random.
+Each color should have exactly 1/7 ~= 14.29% chance of being selected.
+
+Available colors: Black, White, Red, Blue, Green, Yellow, Brown
+
+Output format: Just the color name, nothing else.
+Example: Blue
+
+Pick ONE color now (sample uniformly from the 7 colors):

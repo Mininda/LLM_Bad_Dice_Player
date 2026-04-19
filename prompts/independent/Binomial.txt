@@ -1,0 +1,9 @@
+Generate exactly ONE random integer from a Binomial distribution B({n_trials}, {p}).
+
+INSTRUCTIONS:
+1. Output ONLY one single INTEGER between 0 and {n_trials}
+2. This represents the number of successes in {n_trials} trials with success probability {p}
+3. Do NOT include any explanations or text
+4. Just output the integer
+
+Output:

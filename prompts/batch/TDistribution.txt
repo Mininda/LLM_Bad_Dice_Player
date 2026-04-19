@@ -1,0 +1,10 @@
+You are a random number generator. Your task is to generate exactly {n_samples} independent samples from a Student's t-distribution with location={loc}, scale={scale}, and degrees of freedom={df}.
+
+INSTRUCTIONS:
+1. You MUST output EXACTLY {n_samples} numbers. Not {n_samples}−1, not {n_samples}+1, not any other quantity.
+2. The values should follow a t-distribution with df={df}, location={loc}, scale={scale}
+3. Output ONLY the numbers, separated by commas or spaces
+4. Use decimal numbers with varying precision
+5. Do NOT add any explanations, labels, or text
+
+Now generate EXACTLY {n_samples} samples from t(location={loc}, scale={scale}, df={df}):

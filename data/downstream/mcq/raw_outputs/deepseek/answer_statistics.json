@@ -1,0 +1,21 @@
+{
+  "model": "DeepSeek V3.2",
+  "language": "English",
+  "temperature": 1.0,
+  "total_questions": 1003,
+  "successfully_parsed": 1000,
+  "parse_rate": 0.9970089730807578,
+  "distribution": {
+    "B": 282,
+    "C": 368,
+    "A": 169,
+    "D": 181
+  },
+  "percentages": {
+    "A": 16.900000000000002,
+    "B": 28.199999999999996,
+    "C": 36.8,
+    "D": 18.099999999999998
+  },
+  "timestamp": "2025-12-29T07:21:08.689700"
+}

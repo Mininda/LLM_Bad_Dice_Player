@@ -1,0 +1,77 @@
+{
+  "mcq": {
+    "n_samples": 1000,
+    "temperature": 1.0,
+    "model_order": ["GPT-4o", "Llama-3.3", "DeepSeek-V3.2", "Qwen3", "Llama-4", "GPT-OSS"],
+    "model_dirs": {
+      "GPT-4o": "gpt4o",
+      "Llama-3.3": "llama33",
+      "DeepSeek-V3.2": "deepseek",
+      "Qwen3": "qwen3",
+      "Llama-4": "llama4",
+      "GPT-OSS": "gptoss"
+    },
+    "target": {"A": 0.25, "B": 0.25, "C": 0.25, "D": 0.25}
+  },
+  "joint_attributes": {
+    "n_samples": 1000,
+    "temperature": 1.0,
+    "model_order": ["GPT-4o", "DeepSeek-V3.2", "Qwen3", "Llama-3.3", "Llama-4", "GPT-OSS"],
+    "model_dirs": {
+      "GPT-4o": "gpt4o",
+      "DeepSeek-V3.2": "deepseek",
+      "Qwen3": "qwen3",
+      "Llama-3.3": "llama33",
+      "Llama-4": "llama4",
+      "GPT-OSS": "gptoss"
+    },
+    "gender_target": {"male": 0.4949, "female": 0.5051},
+    "race_target": {
+      "white": 0.5746,
+      "hispanic": 0.2002,
+      "black": 0.1263,
+      "asian": 0.0649,
+      "others": 0.0340
+    },
+    "height_target": {"mean": 169.0, "std": 10.0},
+    "color_target": {
+      "black": 0.14285714285714285,
+      "white": 0.14285714285714285,
+      "red": 0.14285714285714285,
+      "blue": 0.14285714285714285,
+      "green": 0.14285714285714285,
+      "yellow": 0.14285714285714285,
+      "brown": 0.14285714285714285
+    }
+  },
+  "independent_attributes": {
+    "n_samples": 1000,
+    "temperature": 1.0,
+    "model_order": ["Llama-3.3", "DeepSeek-V3.2", "Qwen3", "Llama-4", "GPT-OSS"],
+    "model_dirs": {
+      "Llama-3.3": "llama33",
+      "DeepSeek-V3.2": "deepseek",
+      "Qwen3": "qwen3",
+      "Llama-4": "llama4",
+      "GPT-OSS": "gptoss"
+    },
+    "gender_target": {"male": 0.4949, "female": 0.5051},
+    "race_target": {
+      "white": 0.5746,
+      "hispanic": 0.2002,
+      "black": 0.1263,
+      "asian": 0.0649,
+      "others": 0.0340
+    },
+    "height_target": {"mean": 169.0, "std": 10.0},
+    "color_target": {
+      "black": 0.14285714285714285,
+      "white": 0.14285714285714285,
+      "red": 0.14285714285714285,
+      "blue": 0.14285714285714285,
+      "green": 0.14285714285714285,
+      "yellow": 0.14285714285714285,
+      "brown": 0.14285714285714285
+    }
+  }
+}

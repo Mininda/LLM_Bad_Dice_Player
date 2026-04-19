@@ -1,0 +1,10 @@
+Generate exactly ONE random number from a Logistic distribution with location μ = 0 and scale s = 1.
+
+INSTRUCTIONS:
+1. Output ONLY one single number
+2. Each number can be any real value
+3. This should be an independent random sample from the Logistic distribution
+4. Do NOT include any explanations, labels, or additional text
+5. Just output the number with decimal precision
+
+Output:

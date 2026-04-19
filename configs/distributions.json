@@ -1,0 +1,112 @@
+{
+  "paper_distribution_order": [
+    "Bernoulli",
+    "Binomial",
+    "Poisson",
+    "Uniform",
+    "Gaussian",
+    "Beta",
+    "Exponential",
+    "Cauchy",
+    "TDistribution",
+    "ChiSquare",
+    "FDistribution",
+    "Gamma",
+    "Weibull",
+    "Laplace",
+    "Logistic"
+  ],
+  "tier_order": ["Tier I", "Tier II", "Tier III"],
+  "distributions": {
+    "Uniform": {
+      "support": "continuous",
+      "tier": "Tier I",
+      "paper_name": "Uniform",
+      "parameters": {"low": 0, "high": 1}
+    },
+    "Gaussian": {
+      "support": "continuous",
+      "tier": "Tier I",
+      "paper_name": "Gaussian",
+      "parameters": {"mean": 0, "std": 1}
+    },
+    "Bernoulli": {
+      "support": "discrete",
+      "tier": "Tier I",
+      "paper_name": "Bernoulli",
+      "parameters": {"p": 0.7}
+    },
+    "Beta": {
+      "support": "continuous",
+      "tier": "Tier II",
+      "paper_name": "Beta",
+      "parameters": {"alpha": 2, "beta": 2}
+    },
+    "Binomial": {
+      "support": "discrete",
+      "tier": "Tier II",
+      "paper_name": "Binomial",
+      "parameters": {"n_trials": 10, "p": 0.5}
+    },
+    "Poisson": {
+      "support": "discrete",
+      "tier": "Tier II",
+      "paper_name": "Poisson",
+      "parameters": {"lambda_param": 5}
+    },
+    "Exponential": {
+      "support": "continuous",
+      "tier": "Tier II",
+      "paper_name": "Exponential",
+      "parameters": {"lambda_param": 1, "mean": 1}
+    },
+    "Cauchy": {
+      "support": "continuous",
+      "tier": "Tier III",
+      "paper_name": "Cauchy",
+      "parameters": {"loc": 0, "scale": 1}
+    },
+    "TDistribution": {
+      "support": "continuous",
+      "tier": "Tier III",
+      "paper_name": "Student's t",
+      "parameters": {"loc": 0, "scale": 1, "df": 3}
+    },
+    "ChiSquare": {
+      "support": "continuous",
+      "tier": "Tier III",
+      "paper_name": "Chi-Square",
+      "parameters": {"df": 5}
+    },
+    "FDistribution": {
+      "support": "continuous",
+      "tier": "Tier III",
+      "paper_name": "F-Distribution",
+      "parameters": {"dfn": 5, "dfd": 10}
+    },
+    "Gamma": {
+      "support": "continuous",
+      "tier": "Tier III",
+      "paper_name": "Gamma",
+      "parameters": {"shape": 2, "scale": 2}
+    },
+    "Weibull": {
+      "support": "continuous",
+      "tier": "Tier III",
+      "paper_name": "Weibull",
+      "parameters": {"shape": 1.5, "scale": 1}
+    },
+    "Laplace": {
+      "support": "continuous",
+      "tier": "Tier III",
+      "paper_name": "Laplace",
+      "parameters": {"loc": 0, "scale": 1}
+    },
+    "Logistic": {
+      "support": "continuous",
+      "tier": "Tier III",
+      "paper_name": "Logistic",
+      "parameters": {"loc": 0, "scale": 1}
+    }
+  }
+}

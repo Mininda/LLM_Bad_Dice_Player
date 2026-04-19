@@ -1,0 +1,9 @@
+Generate exactly ONE random number from a Student's t-distribution with location={loc}, scale={scale}, and degrees of freedom={df}.
+
+INSTRUCTIONS:
+1. Output ONLY one single number
+2. This should be an independent random sample from t(location={loc}, scale={scale}, df={df})
+3. Do NOT include any explanations, labels, or additional text
+4. Just output the number with decimal precision
+
+Output:

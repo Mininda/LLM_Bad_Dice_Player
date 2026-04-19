@@ -1,0 +1,648 @@
+{
+  "mcq": {
+    "GPT-4o": {
+      "raw_file": "data/downstream/mcq/raw_outputs/gpt4o/all_questions.json",
+      "stats_file": "data/downstream/mcq/raw_outputs/gpt4o/answer_statistics.json",
+      "n": 1000,
+      "counts": {
+        "A": 126,
+        "C": 351,
+        "B": 468,
+        "D": 55
+      },
+      "percentages": {
+        "A": 12.6,
+        "B": 46.800000000000004,
+        "C": 35.099999999999994,
+        "D": 5.5
+      },
+      "chi2": 444.504,
+      "p_value": 5.058648017315958e-96
+    },
+    "Llama-3.3": {
+      "raw_file": "data/downstream/mcq/raw_outputs/llama33/all_questions.json",
+      "stats_file": "data/downstream/mcq/raw_outputs/llama33/answer_statistics.json",
+      "n": 1000,
+      "counts": {
+        "B": 329,
+        "C": 429,
+        "D": 70,
+        "A": 172
+      },
+      "percentages": {
+        "A": 17.2,
+        "B": 32.9,
+        "C": 42.9,
+        "D": 7.000000000000001
+      },
+      "chi2": 307.06399999999996,
+      "p_value": 2.943483580771031e-66
+    },
+    "DeepSeek-V3.2": {
+      "raw_file": "data/downstream/mcq/raw_outputs/deepseek/all_questions.json",
+      "stats_file": "data/downstream/mcq/raw_outputs/deepseek/answer_statistics.json",
+      "n": 1000,
+      "counts": {
+        "B": 282,
+        "C": 368,
+        "A": 169,
+        "D": 181
+      },
+      "percentages": {
+        "A": 16.900000000000002,
+        "B": 28.199999999999996,
+        "C": 36.8,
+        "D": 18.099999999999998
+      },
+      "chi2": 105.08,
+      "p_value": 1.2558667468398835e-22
+    },
+    "Qwen3": {
+      "raw_file": "data/downstream/mcq/raw_outputs/qwen3/all_questions.json",
+      "stats_file": "data/downstream/mcq/raw_outputs/qwen3/answer_statistics.json",
+      "n": 1000,
+      "counts": {
+        "B": 356,
+        "C": 315,
+        "A": 218,
+        "D": 111
+      },
+      "percentages": {
+        "A": 21.8,
+        "B": 35.6,
+        "C": 31.5,
+        "D": 11.1
+      },
+      "chi2": 143.224,
+      "p_value": 7.625224962983975e-31
+    },
+    "Llama-4": {
+      "raw_file": "data/downstream/mcq/raw_outputs/llama4/all_questions.json",
+      "stats_file": "data/downstream/mcq/raw_outputs/llama4/answer_statistics.json",
+      "n": 1000,
+      "counts": {
+        "B": 423,
+        "C": 227,
+        "A": 286,
+        "D": 64
+      },
+      "percentages": {
+        "A": 28.599999999999998,
+        "B": 42.3,
+        "C": 22.7,
+        "D": 6.4
+      },
+      "chi2": 265.4,
+      "p_value": 3.052389842801947e-57
+    },
+    "GPT-OSS": {
+      "raw_file": "data/downstream/mcq/raw_outputs/gptoss/all_questions.json",
+      "stats_file": "data/downstream/mcq/raw_outputs/gptoss/answer_statistics.json",
+      "n": 1000,
+      "counts": {
+        "B": 277,
+        "D": 132,
+        "C": 546,
+        "A": 45
+      },
+      "percentages": {
+        "A": 4.5,
+        "B": 27.700000000000003,
+        "C": 54.6,
+        "D": 13.200000000000001
+      },
+      "chi2": 577.176,
+      "p_value": 8.936526580548198e-125
+    }
+  },
+  "joint_attributes": {
+    "GPT-4o": {
+      "raw_file": "data/downstream/attributes/joint/gpt4o/all_results.json",
+      "n": 1000,
+      "gender_percentages": {
+        "male": 75.0,
+        "female": 25.0
+      },
+      "gender_chi2": 260.33112485022934,
+      "gender_p_value": 1.453245560825396e-58,
+      "race_percentages": {
+        "white": 41.8,
+        "hispanic": 0.0,
+        "black": 24.7,
+        "asian": 33.5,
+        "others": 0.0
+      },
+      "height_mean": 172.658,
+      "height_std": 2.964764042183766,
+      "height_ks": 0.510259709439103,
+      "height_p_value": 5.328709854027369e-242,
+      "color_percentages": {
+        "black": 0.6,
+        "white": 2.6,
+        "red": 28.1,
+        "blue": 0.0,
+        "green": 53.6,
+        "yellow": 10.7,
+        "brown": 4.4
+      },
+      "targets": {
+        "race": {
+          "white": 0.5746,
+          "hispanic": 0.2002,
+          "black": 0.1263,
+          "asian": 0.0649,
+          "others": 0.034
+        },
+        "color": {
+          "black": 0.14285714285714285,
+          "white": 0.14285714285714285,
+          "red": 0.14285714285714285,
+          "blue": 0.14285714285714285,
+          "green": 0.14285714285714285,
+          "yellow": 0.14285714285714285,
+          "brown": 0.14285714285714285
+        }
+      }
+    },
+    "DeepSeek-V3.2": {
+      "raw_file": "data/downstream/attributes/joint/deepseek/all_results.json",
+      "n": 1000,
+      "gender_percentages": {
+        "male": 60.4,
+        "female": 39.6
+      },
+      "gender_chi2": 47.61619398882256,
+      "gender_p_value": 5.1838493630849496e-12,
+      "race_percentages": {
+        "white": 54.5,
+        "hispanic": 6.0,
+        "black": 10.7,
+        "asian": 28.5,
+        "others": 0.3
+      },
+      "height_mean": 171.328,
+      "height_std": 5.643426642055717,
+      "height_ks": 0.370259709439103,
+      "height_p_value": 1.657738513458456e-123,
+      "color_percentages": {
+        "black": 8.4,
+        "white": 15.1,
+        "red": 22.8,
+        "blue": 1.2,
+        "green": 27.7,
+        "yellow": 13.4,
+        "brown": 11.4
+      },
+      "targets": {
+        "race": {
+          "white": 0.5746,
+          "hispanic": 0.2002,
+          "black": 0.1263,
+          "asian": 0.0649,
+          "others": 0.034
+        },
+        "color": {
+          "black": 0.14285714285714285,
+          "white": 0.14285714285714285,
+          "red": 0.14285714285714285,
+          "blue": 0.14285714285714285,
+          "green": 0.14285714285714285,
+          "yellow": 0.14285714285714285,
+          "brown": 0.14285714285714285
+        }
+      }
+    },
+    "Qwen3": {
+      "raw_file": "data/downstream/attributes/joint/qwen3/all_results.json",
+      "n": 1000,
+      "gender_percentages": {
+        "male": 29.3,
+        "female": 70.7
+      },
+      "gender_chi2": 163.071405949075,
+      "gender_p_value": 2.4133577325725585e-37,
+      "race_percentages": {
+        "white": 57.2,
+        "hispanic": 27.1,
+        "black": 10.6,
+        "asian": 4.9,
+        "others": 0.2
+      },
+      "height_mean": 171.868,
+      "height_std": 3.901768803991313,
+      "height_ks": 0.393259709439103,
+      "height_p_value": 6.914206078276496e-140,
+      "color_percentages": {
+        "black": 1.5,
+        "white": 2.3,
+        "red": 38.7,
+        "blue": 20.4,
+        "green": 27.6,
+        "yellow": 4.5,
+        "brown": 5.0
+      },
+      "targets": {
+        "race": {
+          "white": 0.5746,
+          "hispanic": 0.2002,
+          "black": 0.1263,
+          "asian": 0.0649,
+          "others": 0.034
+        },
+        "color": {
+          "black": 0.14285714285714285,
+          "white": 0.14285714285714285,
+          "red": 0.14285714285714285,
+          "blue": 0.14285714285714285,
+          "green": 0.14285714285714285,
+          "yellow": 0.14285714285714285,
+          "brown": 0.14285714285714285
+        }
+      }
+    },
+    "Llama-3.3": {
+      "raw_file": "data/downstream/attributes/joint/llama33/all_results.json",
+      "n": 1000,
+      "gender_percentages": {
+        "male": 31.7,
+        "female": 68.3
+      },
+      "gender_chi2": 126.6068121727385,
+      "gender_p_value": 2.2647827492231434e-29,
+      "race_percentages": {
+        "white": 70.5,
+        "hispanic": 6.5,
+        "black": 6.0,
+        "asian": 17.0,
+        "others": 0.0
+      },
+      "height_mean": 172.463,
+      "height_std": 0.9346146288735826,
+      "height_ks": 0.6039114221889526,
+      "height_p_value": 0.0,
+      "color_percentages": {
+        "black": 0.1,
+        "white": 0.1,
+        "red": 0.4,
+        "blue": 0.5,
+        "green": 96.0,
+        "yellow": 0.5,
+        "brown": 2.4
+      },
+      "targets": {
+        "race": {
+          "white": 0.5746,
+          "hispanic": 0.2002,
+          "black": 0.1263,
+          "asian": 0.0649,
+          "others": 0.034
+        },
+        "color": {
+          "black": 0.14285714285714285,
+          "white": 0.14285714285714285,
+          "red": 0.14285714285714285,
+          "blue": 0.14285714285714285,
+          "green": 0.14285714285714285,
+          "yellow": 0.14285714285714285,
+          "brown": 0.14285714285714285
+        }
+      }
+    },
+    "Llama-4": {
+      "raw_file": "data/downstream/attributes/joint/llama4/all_results.json",
+      "n": 1000,
+      "gender_percentages": {
+        "male": 2.8,
+        "female": 97.2
+      },
+      "gender_chi2": 872.0731704926582,
+      "gender_p_value": 1.1558038468329555e-191,
+      "race_percentages": {
+        "white": 51.3,
+        "hispanic": 42.9,
+        "black": 1.1,
+        "asian": 4.7,
+        "others": 0.0
+      },
+      "height_mean": 172.52,
+      "height_std": 1.4972781444480654,
+      "height_ks": 0.535827837277029,
+      "height_p_value": 6.71136207110195e-269,
+      "color_percentages": {
+        "black": 4.1,
+        "white": 8.0,
+        "red": 1.1,
+        "blue": 18.6,
+        "green": 55.0,
+        "yellow": 6.6,
+        "brown": 6.6
+      },
+      "targets": {
+        "race": {
+          "white": 0.5746,
+          "hispanic": 0.2002,
+          "black": 0.1263,
+          "asian": 0.0649,
+          "others": 0.034
+        },
+        "color": {
+          "black": 0.14285714285714285,
+          "white": 0.14285714285714285,
+          "red": 0.14285714285714285,
+          "blue": 0.14285714285714285,
+          "green": 0.14285714285714285,
+          "yellow": 0.14285714285714285,
+          "brown": 0.14285714285714285
+        }
+      }
+    },
+    "GPT-OSS": {
+      "raw_file": "data/downstream/attributes/joint/gptoss/all_results.json",
+      "n": 1000,
+      "gender_percentages": {
+        "male": 21.3,
+        "female": 78.7
+      },
+      "gender_chi2": 317.9035146816675,
+      "gender_p_value": 4.1453934279176016e-71,
+      "race_percentages": {
+        "white": 45.0,
+        "hispanic": 10.3,
+        "black": 15.6,
+        "asian": 29.1,
+        "others": 0.0
+      },
+      "height_mean": 172.964,
+      "height_std": 3.8971645964588015,
+      "height_ks": 0.5159114221889526,
+      "height_p_value": 8.577613281985316e-248,
+      "color_percentages": {
+        "black": 0.1,
+        "white": 0.0,
+        "red": 54.0,
+        "blue": 1.5,
+        "green": 29.2,
+        "yellow": 14.1,
+        "brown": 1.1
+      },
+      "targets": {
+        "race": {
+          "white": 0.5746,
+          "hispanic": 0.2002,
+          "black": 0.1263,
+          "asian": 0.0649,
+          "others": 0.034
+        },
+        "color": {
+          "black": 0.14285714285714285,
+          "white": 0.14285714285714285,
+          "red": 0.14285714285714285,
+          "blue": 0.14285714285714285,
+          "green": 0.14285714285714285,
+          "yellow": 0.14285714285714285,
+          "brown": 0.14285714285714285
+        }
+      }
+    }
+  },
+  "independent_attributes": {
+    "gender": {
+      "Llama-3.3": {
+        "raw_file": "data/downstream/attributes/independent/gender/llama33/all_prompts.json",
+        "n": 1000,
+        "percentages": {
+          "male": 3.1,
+          "female": 96.9
+        },
+        "chi2": 860.9024082865583,
+        "p_value": 3.1001121446301476e-189
+      },
+      "DeepSeek-V3.2": {
+        "raw_file": "data/downstream/attributes/independent/gender/deepseek/all_prompts.json",
+        "n": 1000,
+        "percentages": {
+          "male": 51.9,
+          "female": 48.1
+        },
+        "chi2": 2.323481735039707,
+        "p_value": 0.1274345042332526
+      },
+      "Qwen3": {
+        "raw_file": "data/downstream/attributes/independent/gender/qwen3/all_prompts.json",
+        "n": 1000,
+        "percentages": {
+          "male": 2.3,
+          "female": 97.7
+        },
+        "chi2": 890.8511241509568,
+        "p_value": 9.565058768755554e-196
+      },
+      "Llama-4": {
+        "raw_file": "data/downstream/attributes/independent/gender/llama4/all_prompts.json",
+        "n": 1000,
+        "percentages": {
+          "male": 0.0,
+          "female": 100.0
+        },
+        "chi2": 979.8059790140568,
+        "p_value": 4.403143991074529e-215
+      },
+      "GPT-OSS": {
+        "raw_file": "data/downstream/attributes/independent/gender/gptoss/all_prompts.json",
+        "n": 1000,
+        "percentages": {
+          "male": 0.2,
+          "female": 99.8
+        },
+        "chi2": 971.9027567628137,
+        "p_value": 2.2997511466514813e-213
+      }
+    },
+    "race": {
+      "Llama-3.3": {
+        "raw_file": "data/downstream/attributes/independent/race/llama33/all_prompts.json",
+        "n": 1000,
+        "percentages": {
+          "white": 95.5,
+          "hispanic": 0.0,
+          "black": 1.9,
+          "asian": 2.6,
+          "others": 0.0
+        },
+        "chi2": 600.5088965854275,
+        "p_value": 1.2024953563617e-128
+      },
+      "DeepSeek-V3.2": {
+        "raw_file": "data/downstream/attributes/independent/race/deepseek/all_prompts.json",
+        "n": 1000,
+        "percentages": {
+          "white": 43.3,
+          "hispanic": 14.0,
+          "black": 26.3,
+          "asian": 13.2,
+          "others": 3.2
+        },
+        "chi2": 270.4455087289902,
+        "p_value": 2.557134720210098e-57
+      },
+      "Qwen3": {
+        "raw_file": "data/downstream/attributes/independent/race/qwen3/all_prompts.json",
+        "n": 1000,
+        "percentages": {
+          "white": 44.5,
+          "hispanic": 26.1,
+          "black": 26.6,
+          "asian": 1.7,
+          "others": 1.1
+        },
+        "chi2": 253.12930548045347,
+        "p_value": 1.3784787069824884e-53
+      },
+      "Llama-4": {
+        "raw_file": "data/downstream/attributes/independent/race/llama4/all_prompts.json",
+        "n": 1000,
+        "percentages": {
+          "white": 93.6,
+          "hispanic": 6.0,
+          "black": 0.3,
+          "asian": 0.1,
+          "others": 0.0
+        },
+        "chi2": 542.7745675628156,
+        "p_value": 3.74271729444377e-116
+      },
+      "GPT-OSS": {
+        "raw_file": "data/downstream/attributes/independent/race/gptoss/all_prompts.json",
+        "n": 1000,
+        "percentages": {
+          "white": 71.1,
+          "hispanic": 13.4,
+          "black": 9.9,
+          "asian": 5.6,
+          "others": 0.0
+        },
+        "chi2": 95.39072955475947,
+        "p_value": 9.411392551104286e-20
+      }
+    },
+    "height": {
+      "Llama-3.3": {
+        "raw_file": "data/downstream/attributes/independent/height/llama33/all_heights.json",
+        "n": 1000,
+        "mean": 171.113,
+        "std": 4.487133312635737,
+        "ks": 0.3325782583896758,
+        "p_value": 4.349455455418871e-99
+      },
+      "DeepSeek-V3.2": {
+        "raw_file": "data/downstream/attributes/independent/height/deepseek/all_heights.json",
+        "n": 1000,
+        "mean": 169.654,
+        "std": 5.36517185829765,
+        "ks": 0.211963652223073,
+        "p_value": 6.6673930502713306e-40
+      },
+      "Qwen3": {
+        "raw_file": "data/downstream/attributes/independent/height/qwen3/all_heights.json",
+        "n": 1000,
+        "mean": 169.482,
+        "std": 1.3818775581018694,
+        "ks": 0.496,
+        "p_value": 9.301646788241219e-228
+      },
+      "Llama-4": {
+        "raw_file": "data/downstream/attributes/independent/height/llama4/all_heights.json",
+        "n": 1000,
+        "mean": 173.284,
+        "std": 0.6984495914751699,
+        "ks": 0.6554217416103242,
+        "p_value": 0.0
+      },
+      "GPT-OSS": {
+        "raw_file": "data/downstream/attributes/independent/height/gptoss/all_heights.json",
+        "n": 1000,
+        "mean": 170.466,
+        "std": 6.691907472882872,
+        "ks": 0.25091142218895257,
+        "p_value": 5.811417377406923e-56
+      }
+    },
+    "color": {
+      "Llama-3.3": {
+        "raw_file": "data/downstream/attributes/independent/color/llama33/all_colors.json",
+        "n": 1000,
+        "percentages": {
+          "black": 0.0,
+          "white": 0.0,
+          "red": 0.0,
+          "blue": 0.0,
+          "green": 98.4,
+          "yellow": 1.6,
+          "brown": 0.0
+        },
+        "chi2": 5779.583999999999,
+        "p_value": 0.0
+      },
+      "DeepSeek-V3.2": {
+        "raw_file": "data/downstream/attributes/independent/color/deepseek/all_colors.json",
+        "n": 1000,
+        "percentages": {
+          "black": 2.0,
+          "white": 6.2,
+          "red": 15.2,
+          "blue": 27.8,
+          "green": 26.1,
+          "yellow": 17.2,
+          "brown": 5.5
+        },
+        "chi2": 437.534,
+        "p_value": 2.3637581173783897e-91
+      },
+      "Qwen3": {
+        "raw_file": "data/downstream/attributes/independent/color/qwen3/all_colors.json",
+        "n": 1000,
+        "percentages": {
+          "black": 15.2,
+          "white": 3.1,
+          "red": 9.9,
+          "blue": 53.8,
+          "green": 11.6,
+          "yellow": 4.2,
+          "brown": 2.2
+        },
+        "chi2": 1373.0979999999997,
+        "p_value": 1.6185867331530446e-293
+      },
+      "Llama-4": {
+        "raw_file": "data/downstream/attributes/independent/color/llama4/all_colors.json",
+        "n": 1000,
+        "percentages": {
+          "black": 0.0,
+          "white": 0.0,
+          "red": 0.0,
+          "blue": 0.0,
+          "green": 75.8,
+          "yellow": 24.2,
+          "brown": 0.0
+        },
+        "chi2": 3431.8959999999997,
+        "p_value": 0.0
+      },
+      "GPT-OSS": {
+        "raw_file": "data/downstream/attributes/independent/color/gptoss/all_colors.json",
+        "n": 1000,
+        "percentages": {
+          "black": 0.0,
+          "white": 0.1,
+          "red": 18.9,
+          "blue": 3.6,
+          "green": 65.5,
+          "yellow": 11.9,
+          "brown": 0.0
+        },
+        "chi2": 2361.4279999999994,
+        "p_value": 0.0
+      }
+    }
+  }
+}

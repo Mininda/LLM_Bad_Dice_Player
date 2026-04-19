@@ -1,0 +1,8 @@
+Generate ONE random number from an Exponential distribution with rate parameter λ={lambda_param} (mean={mean}).
+
+IMPORTANT:
+- Output ONLY a single non-negative number (≥ 0)
+- No explanation, no text, just the number
+- Use decimal format (e.g., 0.5, 1.23, 2.7)
+
+Generate ONE sample from Exponential(λ={lambda_param}):

@@ -1,0 +1,23 @@
+{
+  "model": "Llama 4 Scout 17B",
+  "api": "DeepInfra",
+  "language": "English",
+  "temperature": 1.0,
+  "total_questions": 1000,
+  "successfully_parsed": 1000,
+  "parse_rate": 1.0,
+  "elapsed_time_seconds": 106.699618,
+  "distribution": {
+    "B": 423,
+    "C": 227,
+    "A": 286,
+    "D": 64
+  },
+  "percentages": {
+    "A": 28.599999999999998,
+    "B": 42.3,
+    "C": 22.7,
+    "D": 6.4
+  },
+  "timestamp": "2025-12-29T06:45:48.147569"
+}

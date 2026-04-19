@@ -1,0 +1,10 @@
+Generate exactly ONE random number from a Bernoulli distribution with parameter p (probability of success) = 0.7.
+
+INSTRUCTIONS:
+1. Output ONLY one single number
+2. Output ONLY 0 or 1 for each sample
+3. This should be an independent random sample from the Bernoulli distribution
+4. Do NOT include any explanations, labels, or additional text
+5. Just output the number with decimal precision
+
+Output:

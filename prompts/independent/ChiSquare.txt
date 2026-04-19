@@ -1,0 +1,10 @@
+Generate exactly ONE random number from a Chi-square distribution with k = 5 degrees of freedom.
+
+INSTRUCTIONS:
+1. Output ONLY one single number
+2. Each number must be >= 0
+3. This should be an independent random sample from the ChiSquare distribution
+4. Do NOT include any explanations, labels, or additional text
+5. Just output the number with decimal precision
+
+Output:

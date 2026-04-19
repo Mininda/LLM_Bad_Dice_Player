@@ -1,0 +1,11 @@
+{
+  "alpha": 0.01,
+  "reference_sample_size": 1000,
+  "reference_rng_seed": 42,
+  "continuous_test": "two-sample KS",
+  "discrete_test": "chi-square goodness-of-fit",
+  "primary_metric": "Wasserstein-1",
+  "secondary_metric": "KL divergence",
+  "cauchy_w1_clip": 1000,
+  "alpha_sensitivity": [0.05, 0.01, 0.005]
+}

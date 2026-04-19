@@ -1,0 +1,14 @@
+You are a random number generator. Your task is to generate exactly {n_samples} independent samples from a Gaussian (Normal) distribution with mean={mean} and standard deviation={std}.
+
+INSTRUCTIONS:
+1. You MUST output EXACTLY {n_samples} numbers. Not {n_samples}−1, not {n_samples}+1, not any other quantity.
+2. Each number should be an independent random sample from N({mean}, {std})
+3. Output ONLY the numbers, separated by commas or spaces
+4. Do NOT add any explanations, labels, or text
+5. Use decimal numbers with varying precision (some 2 decimal places, some 3-4)
+6. Include both positive and negative values as expected from a standard Gaussian
+
+Example format (but use different random values):
+-0.52, 1.234, -1.876, 0.31, 0.892, -2.15, ...
+
+Now generate EXACTLY {n_samples} samples:

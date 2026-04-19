@@ -1,0 +1,1990 @@
+{
+  "source": "compute_two_sample_tests.py aligned RNG stream",
+  "seed": 42,
+  "n_samples": 1000,
+  "distribution_order": [
+    "Uniform",
+    "Gaussian",
+    "Beta",
+    "Exponential",
+    "Cauchy",
+    "TDistribution",
+    "ChiSquare",
+    "FDistribution",
+    "Gamma",
+    "Weibull",
+    "Laplace",
+    "Logistic",
+    "Bernoulli",
+    "Binomial",
+    "Poisson"
+  ],
+  "note": "For each distribution: batch reference is generated first, independent reference second.",
+  "files": {
+    "npz": "/shared/ssd_14T/home/mindazhao/LLM_Random_Distribution/Python Code/reference_samples_aligned_seed42_n1000.npz"
+  },
+  "references": {
+    "batch": {
+      "Uniform": {
+        "sha256": "b3826bcc79486f1bb6f6dc03df34252953a7bb2f334c5906c9ac056b2fc71a1c",
+        "first_10": [
+          0.3745401188473625,
+          0.9507143064099162,
+          0.7319939418114051,
+          0.5986584841970366,
+          0.15601864044243652,
+          0.15599452033620265,
+          0.05808361216819946,
+          0.8661761457749352,
+          0.6011150117432088,
+          0.7080725777960455
+        ],
+        "mean": 0.4902565533201336,
+        "std": 0.292137361947486,
+        "min": 0.004632023004602859,
+        "max": 0.9997176732861306
+      },
+      "Gaussian": {
+        "sha256": "fa631dc92b4b048a9d558307980c35fb8c54304e4b0caaccbe8bc4916edf9570",
+        "first_10": [
+          -0.877982586756561,
+          -0.82688035403986,
+          -0.22647889190152676,
+          0.3673655068161781,
+          0.9135846262332494,
+          -0.8031789506803448,
+          1.4926885689595217,
+          -0.2711236010425688,
+          -0.021367294348436157,
+          -0.7472116791478234
+        ],
+        "mean": 0.01292782466531083,
+        "std": 0.9781490327036507,
+        "min": -3.0195121558208253,
+        "max": 3.193107567844861
+      },
+      "Beta": {
+        "sha256": "f3f167bbd446694a673999394b3409e5b77f432dda6554d37d25541eb14c4de9",
+        "first_10": [
+          0.22402703900060958,
+          0.12914184240325258,
+          0.5903248370701344,
+          0.6957876191529992,
+          0.651028351577538,
+          0.3630708752208576,
+          0.246944662762971,
+          0.1967713379644367,
+          0.5638540385467231,
+          0.9126439597248843
+        ],
+        "mean": 0.5158504470064693,
+        "std": 0.22712258844722127,
+        "min": 0.029375013265613044,
+        "max": 0.9874782902392814
+      },
+      "Exponential": {
+        "sha256": "f9a4029d709e728e3ae7e8b44f82632c97ef91836fb01c9b0fc7d8cc8a60584f",
+        "first_10": [
+          0.3839753884831765,
+          4.935684919598777,
+          1.134529664918649,
+          1.309611753569941,
+          0.23942193520346214,
+          0.08205864857184766,
+          0.32421009060514727,
+          0.2862143303699577,
+          0.26728367592676616,
+          0.21412722319771213
+        ],
+        "mean": 1.0333133959260563,
+        "std": 1.0288576471384066,
+        "min": 0.0017263113281668304,
+        "max": 6.07320344569284
+      },
+      "Cauchy": {
+        "sha256": "99ebd845ffd0771076100dd089c78f86208f2467a2a939760516f2af6199ef59",
+        "first_10": [
+          1.2026647643371584,
+          0.4742968541924677,
+          -5.188115845584585,
+          -3.226601042962743,
+          -8.355180447254046,
+          -0.13650399972798521,
+          1.6417157341488375,
+          -0.6655318388911037,
+          -0.38088660789378875,
+          3.421036437870227
+        ],
+        "mean": -1.2280490667963175,
+        "std": 53.80815362505468,
+        "min": -1260.860199926447,
+        "max": 374.2905625321016
+      },
+      "TDistribution": {
+        "sha256": "b414141cbead39fe50d64040f9bb320e76abc4c2ee20b4a5600784d7c3717edb",
+        "first_10": [
+          -0.8105792518979994,
+          -0.6660144120519147,
+          -1.2133877873084475,
+          0.4762894937724667,
+          0.8745660369321986,
+          3.821344089088945,
+          -0.3421459540294609,
+          0.7619783479966409,
+          0.7243846669058994,
+          2.2112690506625596
+        ],
+        "mean": 0.030589607662391875,
+        "std": 1.6128118187323954,
+        "min": -12.001596226479402,
+        "max": 11.811220488441812
+      },
+      "ChiSquare": {
+        "sha256": "2a99a64a67bb2c75d3993c29392cbbf0dc077265e4063603d37b5a3b1aad081f",
+        "first_10": [
+          4.9199087356442,
+          3.958673414534762,
+          3.3994044858979806,
+          5.824177334812758,
+          4.75547780914052,
+          5.6829262217373175,
+          4.614045348625031,
+          2.5521211417301126,
+          2.418042887905031,
+          4.4378632417273
+        ],
+        "mean": 5.022029114940537,
+        "std": 3.2113755468120377,
+        "min": 0.1773182118145323,
+        "max": 25.94681885803788
+      },
+      "FDistribution": {
+        "sha256": "8fe64c1e2f7dd7baf8d86a8e9b07cf58a84bf042d184f7e9f130bdfb25c93293",
+        "first_10": [
+          0.42659449561733626,
+          0.7057021585487243,
+          2.0273526360332865,
+          0.5028610650305733,
+          0.6517587768241166,
+          5.2316089731084405,
+          0.7066218108620036,
+          0.5911048526426451,
+          4.554788633822049,
+          1.460539727691615
+        ],
+        "mean": 1.2493521386775097,
+        "std": 1.0764028432575168,
+        "min": 0.01854925754457073,
+        "max": 12.133602108510507
+      },
+      "Gamma": {
+        "sha256": "8e43c5c867f042570937fa193cfb6fa76367b41335a76064e99f0a3196e4e36d",
+        "first_10": [
+          3.5083746526778876,
+          3.996738806655806,
+          2.3847547847205206,
+          0.8984503350271811,
+          2.791004250841215,
+          4.641748496219425,
+          2.1094817579707468,
+          0.9988384492222226,
+          0.18882120650424894,
+          9.458003285259744
+        ],
+        "mean": 3.920595743108024,
+        "std": 2.826817412774444,
+        "min": 0.05742421397860658,
+        "max": 17.807722618424403
+      },
+      "Weibull": {
+        "sha256": "c9204e85de72dbca2630d3ed6666c72c7de98ac6affdc08f2f0a06913ca2520b",
+        "first_10": [
+          0.38924489983687593,
+          2.634460756626197,
+          1.2409241971258167,
+          1.345327711519318,
+          0.23308280314957977,
+          0.7479510519944511,
+          2.039001116201064,
+          0.46276194673993726,
+          0.2911536933695439,
+          0.7613773798261316
+        ],
+        "mean": 0.8732661885781245,
+        "std": 0.6206388690918732,
+        "min": 0.0020614767932728155,
+        "max": 4.791570494825139
+      },
+      "Laplace": {
+        "sha256": "b9cbe79c92dfbb3e72aa326b911e95b542be36235dd1675e93f9f77e673ee66e",
+        "first_10": [
+          -1.0919525237749792,
+          1.8175696148534926,
+          -0.16041253263629682,
+          1.3755708979177068,
+          -0.17969241421257828,
+          0.062364895780931365,
+          -0.45724011320575636,
+          0.3800208300576607,
+          -0.45192431834210667,
+          -0.806673847095718
+        ],
+        "mean": -0.04086777172508387,
+        "std": 1.3815113414370956,
+        "min": -5.495772937087773,
+        "max": 7.950461052660937
+      },
+      "Logistic": {
+        "sha256": "e9ca517083dac58769c02d7aaa745c9f037b503c38f750b3a6e34e8b57307188",
+        "first_10": [
+          1.964979447764657,
+          -2.582487199025458,
+          -1.9199371312647064,
+          2.1498295281436435,
+          -0.34175429574478994,
+          -2.3962564703624887,
+          -1.8218746889503294,
+          2.015820790238992,
+          -0.03959168436004312,
+          -1.6361155920096786
+        ],
+        "mean": -0.06448012413008306,
+        "std": 1.900124971438364,
+        "min": -8.075366300160018,
+        "max": 8.023104276327704
+      },
+      "Bernoulli": {
+        "sha256": "fa43dd955f0d489627ece9c5fa68a44115f9abf06e4bca54fc2a123785f38ebb",
+        "first_10": [
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ],
+        "mean": 0.717,
+        "std": 0.4506818324651152,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "Binomial": {
+        "sha256": "67021a9d00dfa982a68e342868e7ca72aad6f5fa24ae7249f7b0218d0d9c9cee",
+        "first_10": [
+          7.0,
+          4.0,
+          7.0,
+          4.0,
+          5.0,
+          8.0,
+          6.0,
+          4.0,
+          6.0,
+          5.0
+        ],
+        "mean": 5.037,
+        "std": 1.5975553771882787,
+        "min": 0.0,
+        "max": 10.0
+      },
+      "Poisson": {
+        "sha256": "aec0e07115a1ca5d8f68e148e928a6e2c0b0c859992c631d15dcbb1c2758bf3f",
+        "first_10": [
+          4.0,
+          5.0,
+          7.0,
+          8.0,
+          3.0,
+          5.0,
+          8.0,
+          7.0,
+          9.0,
+          2.0
+        ],
+        "mean": 5.069,
+        "std": 2.2179175273571734,
+        "min": 0.0,
+        "max": 14.0
+      }
+    },
+    "independent": {
+      "Uniform": {
+        "sha256": "7c010ae4036318eda1ace96efeb594757442b5cdad9749a9f0c491833fab1de6",
+        "first_10": [
+          0.18513292883861965,
+          0.5419009473783581,
+          0.8729458358764083,
+          0.7322248864095612,
+          0.8065611478614497,
+          0.6587833667107174,
+          0.6922765645178525,
+          0.8491956515653193,
+          0.24966800885918594,
+          0.4894249636431405
+        ],
+        "mean": 0.5070173051792036,
+        "std": 0.2921898934031558,
+        "min": 0.0032182636042786816,
+        "max": 0.9994137257706666
+      },
+      "Gaussian": {
+        "sha256": "65ef753509efd042fecdd76f56f378c8967fb9ff0516a085f0b37f464c0080f2",
+        "first_10": [
+          1.8709651753717822,
+          0.38961417737090387,
+          -0.8682927318763665,
+          0.5346290861224353,
+          -2.6357477390168778,
+          0.003375506597160999,
+          0.32782117284308526,
+          0.9242701395378298,
+          -1.0138959522925377,
+          0.08568716140335904
+        ],
+        "mean": 0.002358271124774162,
+        "std": 1.0231785759466168,
+        "min": -2.9911359709007233,
+        "max": 3.9262377064363267
+      },
+      "Beta": {
+        "sha256": "2521bd783b0cb07a64316bdbe63942997be6458d544776449808a3cab5b1ed61",
+        "first_10": [
+          0.2509290157434129,
+          0.4194730694820048,
+          0.6720667685730006,
+          0.32131587883642565,
+          0.6015229309838035,
+          0.5140761284616594,
+          0.12855902709138994,
+          0.12181895312107449,
+          0.29250047143493635,
+          0.1809640137902153
+        ],
+        "mean": 0.5038953751931025,
+        "std": 0.22203078528852652,
+        "min": 0.01218211615648468,
+        "max": 0.9760868639358959
+      },
+      "Exponential": {
+        "sha256": "def5ee10eaa708e7091fc09e047f718d5352cdbab69f8200050372d830e95a2d",
+        "first_10": [
+          0.5686790955368947,
+          0.6111982256941221,
+          0.8006081090759324,
+          0.11158284862008769,
+          4.7562097328668855,
+          0.27989489908475823,
+          0.22133569090044852,
+          0.7482433152315376,
+          0.7704779575329043,
+          0.579498435465477
+        ],
+        "mean": 0.9807854296034287,
+        "std": 0.9972200375461291,
+        "min": 0.0003097798918424203,
+        "max": 9.495716214841172
+      },
+      "Cauchy": {
+        "sha256": "7a99c1d403f52b6ad2a5a8efb195609e1d1192906835b835e852dfee19775eda",
+        "first_10": [
+          0.07672789019405023,
+          1.8529369154766127,
+          -2.7464916656441587,
+          1.3289349718802503,
+          -1.543683804196928,
+          1.452909827722602,
+          0.3671392674521967,
+          -1.4397507379863126,
+          -0.08390639510260146,
+          0.6430471795452131
+        ],
+        "mean": -0.4659649961467134,
+        "std": 17.233128330902847,
+        "min": -372.8594101849286,
+        "max": 112.18915078034127
+      },
+      "TDistribution": {
+        "sha256": "56a6c25e2a538e36c89610741ad0ea9545f8dcf4cd03088b0f7cf57ed561f6c2",
+        "first_10": [
+          -0.9234206870338498,
+          -0.7916771405468923,
+          -1.6520291985948068,
+          -1.4622007442541882,
+          1.5225912788202047,
+          0.1417755614913693,
+          0.6773904550235514,
+          1.166232113629687,
+          -0.41671259706333497,
+          6.048398074066535
+        ],
+        "mean": 0.0711682455581209,
+        "std": 1.587339200003534,
+        "min": -10.932810241184514,
+        "max": 7.36218803027791
+      },
+      "ChiSquare": {
+        "sha256": "47df23b2a81a118254b7b49320584e69c7bd5c102c368789439273e721d53a55",
+        "first_10": [
+          5.061220349769495,
+          6.354668785154656,
+          1.7447957322088266,
+          4.223758873409138,
+          1.8773644239240959,
+          8.084839304218045,
+          4.514606171861354,
+          2.4437339808620857,
+          2.9240616240982584,
+          3.238955624554376
+        ],
+        "mean": 4.947279538437005,
+        "std": 3.1078074819232735,
+        "min": 0.07076126355041203,
+        "max": 20.513318152237535
+      },
+      "FDistribution": {
+        "sha256": "752cac583a65e5907817a21365ee991edff068a9bdf23215d779a4dae05bb24e",
+        "first_10": [
+          0.3144550622117672,
+          0.8566240237444632,
+          0.7429464769806031,
+          0.5902137207161395,
+          0.8794175032739335,
+          1.0391249534226432,
+          2.155225142160447,
+          1.3962948359975942,
+          1.705876801049529,
+          1.4714304655573467
+        ],
+        "mean": 1.2294199131708266,
+        "std": 1.116713461900244,
+        "min": 0.041958017810904004,
+        "max": 8.923826575203273
+      },
+      "Gamma": {
+        "sha256": "7b78c90aab4bc416ea6938da59036d7bf03a2dd85d7b017cd67bbc9e9c25d5fa",
+        "first_10": [
+          0.5919126244756268,
+          3.1900297129366937,
+          6.579023513331176,
+          1.527675254333663,
+          2.210069618519153,
+          2.8134228745448513,
+          2.472410002145334,
+          3.218250377572282,
+          0.3399653068138011,
+          7.06774321314167
+        ],
+        "mean": 3.969468073123294,
+        "std": 2.812312394912073,
+        "min": 0.05021724074498279,
+        "max": 18.112661886129885
+      },
+      "Weibull": {
+        "sha256": "bf5a081ac64a3c4bdd8ae2c2e676206065ff4544eb332b2e6e55f931dc3fd430",
+        "first_10": [
+          0.8300839231809899,
+          0.6794683810482985,
+          1.4137566727657813,
+          1.7001071307455695,
+          0.9273506843923297,
+          0.34732543202092153,
+          0.7332600029388924,
+          0.7898196571511851,
+          0.6842431189126587,
+          0.45250850654388364
+        ],
+        "mean": 0.9210303004823707,
+        "std": 0.6295766412394453,
+        "min": 0.01515206221352335,
+        "max": 3.6866722007160284
+      },
+      "Laplace": {
+        "sha256": "be2da6c96fc0bea8271624fe959374f00d329d43d4e1b8c5de057ebe34a09e71",
+        "first_10": [
+          0.020281935000546997,
+          1.2453407682102982,
+          -0.877929343305959,
+          -0.1716772732326724,
+          -0.6677885065796156,
+          -3.622144490130768,
+          1.5947867315077224,
+          -1.3089391257700553,
+          0.762570640823398,
+          -0.36642739691508425
+        ],
+        "mean": -0.02351739652054871,
+        "std": 1.3945717800447823,
+        "min": -6.853563187089308,
+        "max": 9.360102632986681
+      },
+      "Logistic": {
+        "sha256": "11323be063e3372ea0142c85a435d9ded01f8ad0e62d341d52ee4ff42f60bb76",
+        "first_10": [
+          -1.7134807963517422,
+          1.7989763522601578,
+          -1.1556245343546032,
+          1.6837142892968815,
+          -0.8651504020288017,
+          2.6476222468668933,
+          -1.2710495475110364,
+          -2.592078296987988,
+          2.6916337735854214,
+          -1.616951373806254
+        ],
+        "mean": -0.0600748192984081,
+        "std": 1.7761364379317932,
+        "min": -9.164203594993625,
+        "max": 6.5424616268283105
+      },
+      "Bernoulli": {
+        "sha256": "6b5437d0ac9955ec87629fcabffcbfa0b402904598c71fe18b70cf9b09b67210",
+        "first_10": [
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ],
+        "mean": 0.685,
+        "std": 0.46474830929331096,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "Binomial": {
+        "sha256": "24ab441ef76fe050f13fb03a9035f74c174c47f6ab7b6e35b3b3953bc4ed5f7d",
+        "first_10": [
+          5.0,
+          5.0,
+          4.0,
+          5.0,
+          6.0,
+          4.0,
+          4.0,
+          3.0,
+          8.0,
+          6.0
+        ],
+        "mean": 4.954,
+        "std": 1.548638848241346,
+        "min": 0.0,
+        "max": 10.0
+      },
+      "Poisson": {
+        "sha256": "0d6a5a3ca62af84c4291cff209a53c412c8b6cbb741ca950638e2fa2c09d1ba1",
+        "first_10": [
+          2.0,
+          3.0,
+          1.0,
+          12.0,
+          6.0,
+          6.0,
+          5.0,
+          3.0,
+          6.0,
+          3.0
+        ],
+        "mean": 4.956,
+        "std": 2.205204509093641,
+        "min": 0.0,
+        "max": 14.0
+      }
+    }
+  },
+  "model_distribution_mapping": {
+    "GPT-5.2": {
+      "batch": {
+        "Uniform": {
+          "reference_key": "batch/Uniform",
+          "sha256": "b3826bcc79486f1bb6f6dc03df34252953a7bb2f334c5906c9ac056b2fc71a1c"
+        },
+        "Gaussian": {
+          "reference_key": "batch/Gaussian",
+          "sha256": "fa631dc92b4b048a9d558307980c35fb8c54304e4b0caaccbe8bc4916edf9570"
+        },
+        "Beta": {
+          "reference_key": "batch/Beta",
+          "sha256": "f3f167bbd446694a673999394b3409e5b77f432dda6554d37d25541eb14c4de9"
+        },
+        "Exponential": {
+          "reference_key": "batch/Exponential",
+          "sha256": "f9a4029d709e728e3ae7e8b44f82632c97ef91836fb01c9b0fc7d8cc8a60584f"
+        },
+        "Cauchy": {
+          "reference_key": "batch/Cauchy",
+          "sha256": "99ebd845ffd0771076100dd089c78f86208f2467a2a939760516f2af6199ef59"
+        },
+        "TDistribution": {
+          "reference_key": "batch/TDistribution",
+          "sha256": "b414141cbead39fe50d64040f9bb320e76abc4c2ee20b4a5600784d7c3717edb"
+        },
+        "ChiSquare": {
+          "reference_key": "batch/ChiSquare",
+          "sha256": "2a99a64a67bb2c75d3993c29392cbbf0dc077265e4063603d37b5a3b1aad081f"
+        },
+        "FDistribution": {
+          "reference_key": "batch/FDistribution",
+          "sha256": "8fe64c1e2f7dd7baf8d86a8e9b07cf58a84bf042d184f7e9f130bdfb25c93293"
+        },
+        "Gamma": {
+          "reference_key": "batch/Gamma",
+          "sha256": "8e43c5c867f042570937fa193cfb6fa76367b41335a76064e99f0a3196e4e36d"
+        },
+        "Weibull": {
+          "reference_key": "batch/Weibull",
+          "sha256": "c9204e85de72dbca2630d3ed6666c72c7de98ac6affdc08f2f0a06913ca2520b"
+        },
+        "Laplace": {
+          "reference_key": "batch/Laplace",
+          "sha256": "b9cbe79c92dfbb3e72aa326b911e95b542be36235dd1675e93f9f77e673ee66e"
+        },
+        "Logistic": {
+          "reference_key": "batch/Logistic",
+          "sha256": "e9ca517083dac58769c02d7aaa745c9f037b503c38f750b3a6e34e8b57307188"
+        },
+        "Bernoulli": {
+          "reference_key": "batch/Bernoulli",
+          "sha256": "fa43dd955f0d489627ece9c5fa68a44115f9abf06e4bca54fc2a123785f38ebb"
+        },
+        "Binomial": {
+          "reference_key": "batch/Binomial",
+          "sha256": "67021a9d00dfa982a68e342868e7ca72aad6f5fa24ae7249f7b0218d0d9c9cee"
+        },
+        "Poisson": {
+          "reference_key": "batch/Poisson",
+          "sha256": "aec0e07115a1ca5d8f68e148e928a6e2c0b0c859992c631d15dcbb1c2758bf3f"
+        }
+      },
+      "independent": {
+        "Uniform": {
+          "reference_key": "independent/Uniform",
+          "sha256": "7c010ae4036318eda1ace96efeb594757442b5cdad9749a9f0c491833fab1de6"
+        },
+        "Gaussian": {
+          "reference_key": "independent/Gaussian",
+          "sha256": "65ef753509efd042fecdd76f56f378c8967fb9ff0516a085f0b37f464c0080f2"
+        },
+        "Beta": {
+          "reference_key": "independent/Beta",
+          "sha256": "2521bd783b0cb07a64316bdbe63942997be6458d544776449808a3cab5b1ed61"
+        },
+        "Exponential": {
+          "reference_key": "independent/Exponential",
+          "sha256": "def5ee10eaa708e7091fc09e047f718d5352cdbab69f8200050372d830e95a2d"
+        },
+        "Cauchy": {
+          "reference_key": "independent/Cauchy",
+          "sha256": "7a99c1d403f52b6ad2a5a8efb195609e1d1192906835b835e852dfee19775eda"
+        },
+        "TDistribution": {
+          "reference_key": "independent/TDistribution",
+          "sha256": "56a6c25e2a538e36c89610741ad0ea9545f8dcf4cd03088b0f7cf57ed561f6c2"
+        },
+        "ChiSquare": {
+          "reference_key": "independent/ChiSquare",
+          "sha256": "47df23b2a81a118254b7b49320584e69c7bd5c102c368789439273e721d53a55"
+        },
+        "FDistribution": {
+          "reference_key": "independent/FDistribution",
+          "sha256": "752cac583a65e5907817a21365ee991edff068a9bdf23215d779a4dae05bb24e"
+        },
+        "Gamma": {
+          "reference_key": "independent/Gamma",
+          "sha256": "7b78c90aab4bc416ea6938da59036d7bf03a2dd85d7b017cd67bbc9e9c25d5fa"
+        },
+        "Weibull": {
+          "reference_key": "independent/Weibull",
+          "sha256": "bf5a081ac64a3c4bdd8ae2c2e676206065ff4544eb332b2e6e55f931dc3fd430"
+        },
+        "Laplace": {
+          "reference_key": "independent/Laplace",
+          "sha256": "be2da6c96fc0bea8271624fe959374f00d329d43d4e1b8c5de057ebe34a09e71"
+        },
+        "Logistic": {
+          "reference_key": "independent/Logistic",
+          "sha256": "11323be063e3372ea0142c85a435d9ded01f8ad0e62d341d52ee4ff42f60bb76"
+        },
+        "Bernoulli": {
+          "reference_key": "independent/Bernoulli",
+          "sha256": "6b5437d0ac9955ec87629fcabffcbfa0b402904598c71fe18b70cf9b09b67210"
+        },
+        "Binomial": {
+          "reference_key": "independent/Binomial",
+          "sha256": "24ab441ef76fe050f13fb03a9035f74c174c47f6ab7b6e35b3b3953bc4ed5f7d"
+        },
+        "Poisson": {
+          "reference_key": "independent/Poisson",
+          "sha256": "0d6a5a3ca62af84c4291cff209a53c412c8b6cbb741ca950638e2fa2c09d1ba1"
+        }
+      }
+    },
+    "Gemini-3": {
+      "batch": {
+        "Uniform": {
+          "reference_key": "batch/Uniform",
+          "sha256": "b3826bcc79486f1bb6f6dc03df34252953a7bb2f334c5906c9ac056b2fc71a1c"
+        },
+        "Gaussian": {
+          "reference_key": "batch/Gaussian",
+          "sha256": "fa631dc92b4b048a9d558307980c35fb8c54304e4b0caaccbe8bc4916edf9570"
+        },
+        "Beta": {
+          "reference_key": "batch/Beta",
+          "sha256": "f3f167bbd446694a673999394b3409e5b77f432dda6554d37d25541eb14c4de9"
+        },
+        "Exponential": {
+          "reference_key": "batch/Exponential",
+          "sha256": "f9a4029d709e728e3ae7e8b44f82632c97ef91836fb01c9b0fc7d8cc8a60584f"
+        },
+        "Cauchy": {
+          "reference_key": "batch/Cauchy",
+          "sha256": "99ebd845ffd0771076100dd089c78f86208f2467a2a939760516f2af6199ef59"
+        },
+        "TDistribution": {
+          "reference_key": "batch/TDistribution",
+          "sha256": "b414141cbead39fe50d64040f9bb320e76abc4c2ee20b4a5600784d7c3717edb"
+        },
+        "ChiSquare": {
+          "reference_key": "batch/ChiSquare",
+          "sha256": "2a99a64a67bb2c75d3993c29392cbbf0dc077265e4063603d37b5a3b1aad081f"
+        },
+        "FDistribution": {
+          "reference_key": "batch/FDistribution",
+          "sha256": "8fe64c1e2f7dd7baf8d86a8e9b07cf58a84bf042d184f7e9f130bdfb25c93293"
+        },
+        "Gamma": {
+          "reference_key": "batch/Gamma",
+          "sha256": "8e43c5c867f042570937fa193cfb6fa76367b41335a76064e99f0a3196e4e36d"
+        },
+        "Weibull": {
+          "reference_key": "batch/Weibull",
+          "sha256": "c9204e85de72dbca2630d3ed6666c72c7de98ac6affdc08f2f0a06913ca2520b"
+        },
+        "Laplace": {
+          "reference_key": "batch/Laplace",
+          "sha256": "b9cbe79c92dfbb3e72aa326b911e95b542be36235dd1675e93f9f77e673ee66e"
+        },
+        "Logistic": {
+          "reference_key": "batch/Logistic",
+          "sha256": "e9ca517083dac58769c02d7aaa745c9f037b503c38f750b3a6e34e8b57307188"
+        },
+        "Bernoulli": {
+          "reference_key": "batch/Bernoulli",
+          "sha256": "fa43dd955f0d489627ece9c5fa68a44115f9abf06e4bca54fc2a123785f38ebb"
+        },
+        "Binomial": {
+          "reference_key": "batch/Binomial",
+          "sha256": "67021a9d00dfa982a68e342868e7ca72aad6f5fa24ae7249f7b0218d0d9c9cee"
+        },
+        "Poisson": {
+          "reference_key": "batch/Poisson",
+          "sha256": "aec0e07115a1ca5d8f68e148e928a6e2c0b0c859992c631d15dcbb1c2758bf3f"
+        }
+      },
+      "independent": {
+        "Uniform": {
+          "reference_key": "independent/Uniform",
+          "sha256": "7c010ae4036318eda1ace96efeb594757442b5cdad9749a9f0c491833fab1de6"
+        },
+        "Gaussian": {
+          "reference_key": "independent/Gaussian",
+          "sha256": "65ef753509efd042fecdd76f56f378c8967fb9ff0516a085f0b37f464c0080f2"
+        },
+        "Beta": {
+          "reference_key": "independent/Beta",
+          "sha256": "2521bd783b0cb07a64316bdbe63942997be6458d544776449808a3cab5b1ed61"
+        },
+        "Exponential": {
+          "reference_key": "independent/Exponential",
+          "sha256": "def5ee10eaa708e7091fc09e047f718d5352cdbab69f8200050372d830e95a2d"
+        },
+        "Cauchy": {
+          "reference_key": "independent/Cauchy",
+          "sha256": "7a99c1d403f52b6ad2a5a8efb195609e1d1192906835b835e852dfee19775eda"
+        },
+        "TDistribution": {
+          "reference_key": "independent/TDistribution",
+          "sha256": "56a6c25e2a538e36c89610741ad0ea9545f8dcf4cd03088b0f7cf57ed561f6c2"
+        },
+        "ChiSquare": {
+          "reference_key": "independent/ChiSquare",
+          "sha256": "47df23b2a81a118254b7b49320584e69c7bd5c102c368789439273e721d53a55"
+        },
+        "FDistribution": {
+          "reference_key": "independent/FDistribution",
+          "sha256": "752cac583a65e5907817a21365ee991edff068a9bdf23215d779a4dae05bb24e"
+        },
+        "Gamma": {
+          "reference_key": "independent/Gamma",
+          "sha256": "7b78c90aab4bc416ea6938da59036d7bf03a2dd85d7b017cd67bbc9e9c25d5fa"
+        },
+        "Weibull": {
+          "reference_key": "independent/Weibull",
+          "sha256": "bf5a081ac64a3c4bdd8ae2c2e676206065ff4544eb332b2e6e55f931dc3fd430"
+        },
+        "Laplace": {
+          "reference_key": "independent/Laplace",
+          "sha256": "be2da6c96fc0bea8271624fe959374f00d329d43d4e1b8c5de057ebe34a09e71"
+        },
+        "Logistic": {
+          "reference_key": "independent/Logistic",
+          "sha256": "11323be063e3372ea0142c85a435d9ded01f8ad0e62d341d52ee4ff42f60bb76"
+        },
+        "Bernoulli": {
+          "reference_key": "independent/Bernoulli",
+          "sha256": "6b5437d0ac9955ec87629fcabffcbfa0b402904598c71fe18b70cf9b09b67210"
+        },
+        "Binomial": {
+          "reference_key": "independent/Binomial",
+          "sha256": "24ab441ef76fe050f13fb03a9035f74c174c47f6ab7b6e35b3b3953bc4ed5f7d"
+        },
+        "Poisson": {
+          "reference_key": "independent/Poisson",
+          "sha256": "0d6a5a3ca62af84c4291cff209a53c412c8b6cbb741ca950638e2fa2c09d1ba1"
+        }
+      }
+    },
+    "GPT-4o": {
+      "batch": {
+        "Uniform": {
+          "reference_key": "batch/Uniform",
+          "sha256": "b3826bcc79486f1bb6f6dc03df34252953a7bb2f334c5906c9ac056b2fc71a1c"
+        },
+        "Gaussian": {
+          "reference_key": "batch/Gaussian",
+          "sha256": "fa631dc92b4b048a9d558307980c35fb8c54304e4b0caaccbe8bc4916edf9570"
+        },
+        "Beta": {
+          "reference_key": "batch/Beta",
+          "sha256": "f3f167bbd446694a673999394b3409e5b77f432dda6554d37d25541eb14c4de9"
+        },
+        "Exponential": {
+          "reference_key": "batch/Exponential",
+          "sha256": "f9a4029d709e728e3ae7e8b44f82632c97ef91836fb01c9b0fc7d8cc8a60584f"
+        },
+        "Cauchy": {
+          "reference_key": "batch/Cauchy",
+          "sha256": "99ebd845ffd0771076100dd089c78f86208f2467a2a939760516f2af6199ef59"
+        },
+        "TDistribution": {
+          "reference_key": "batch/TDistribution",
+          "sha256": "b414141cbead39fe50d64040f9bb320e76abc4c2ee20b4a5600784d7c3717edb"
+        },
+        "ChiSquare": {
+          "reference_key": "batch/ChiSquare",
+          "sha256": "2a99a64a67bb2c75d3993c29392cbbf0dc077265e4063603d37b5a3b1aad081f"
+        },
+        "FDistribution": {
+          "reference_key": "batch/FDistribution",
+          "sha256": "8fe64c1e2f7dd7baf8d86a8e9b07cf58a84bf042d184f7e9f130bdfb25c93293"
+        },
+        "Gamma": {
+          "reference_key": "batch/Gamma",
+          "sha256": "8e43c5c867f042570937fa193cfb6fa76367b41335a76064e99f0a3196e4e36d"
+        },
+        "Weibull": {
+          "reference_key": "batch/Weibull",
+          "sha256": "c9204e85de72dbca2630d3ed6666c72c7de98ac6affdc08f2f0a06913ca2520b"
+        },
+        "Laplace": {
+          "reference_key": "batch/Laplace",
+          "sha256": "b9cbe79c92dfbb3e72aa326b911e95b542be36235dd1675e93f9f77e673ee66e"
+        },
+        "Logistic": {
+          "reference_key": "batch/Logistic",
+          "sha256": "e9ca517083dac58769c02d7aaa745c9f037b503c38f750b3a6e34e8b57307188"
+        },
+        "Bernoulli": {
+          "reference_key": "batch/Bernoulli",
+          "sha256": "fa43dd955f0d489627ece9c5fa68a44115f9abf06e4bca54fc2a123785f38ebb"
+        },
+        "Binomial": {
+          "reference_key": "batch/Binomial",
+          "sha256": "67021a9d00dfa982a68e342868e7ca72aad6f5fa24ae7249f7b0218d0d9c9cee"
+        },
+        "Poisson": {
+          "reference_key": "batch/Poisson",
+          "sha256": "aec0e07115a1ca5d8f68e148e928a6e2c0b0c859992c631d15dcbb1c2758bf3f"
+        }
+      },
+      "independent": {
+        "Uniform": {
+          "reference_key": "independent/Uniform",
+          "sha256": "7c010ae4036318eda1ace96efeb594757442b5cdad9749a9f0c491833fab1de6"
+        },
+        "Gaussian": {
+          "reference_key": "independent/Gaussian",
+          "sha256": "65ef753509efd042fecdd76f56f378c8967fb9ff0516a085f0b37f464c0080f2"
+        },
+        "Beta": {
+          "reference_key": "independent/Beta",
+          "sha256": "2521bd783b0cb07a64316bdbe63942997be6458d544776449808a3cab5b1ed61"
+        },
+        "Exponential": {
+          "reference_key": "independent/Exponential",
+          "sha256": "def5ee10eaa708e7091fc09e047f718d5352cdbab69f8200050372d830e95a2d"
+        },
+        "Cauchy": {
+          "reference_key": "independent/Cauchy",
+          "sha256": "7a99c1d403f52b6ad2a5a8efb195609e1d1192906835b835e852dfee19775eda"
+        },
+        "TDistribution": {
+          "reference_key": "independent/TDistribution",
+          "sha256": "56a6c25e2a538e36c89610741ad0ea9545f8dcf4cd03088b0f7cf57ed561f6c2"
+        },
+        "ChiSquare": {
+          "reference_key": "independent/ChiSquare",
+          "sha256": "47df23b2a81a118254b7b49320584e69c7bd5c102c368789439273e721d53a55"
+        },
+        "FDistribution": {
+          "reference_key": "independent/FDistribution",
+          "sha256": "752cac583a65e5907817a21365ee991edff068a9bdf23215d779a4dae05bb24e"
+        },
+        "Gamma": {
+          "reference_key": "independent/Gamma",
+          "sha256": "7b78c90aab4bc416ea6938da59036d7bf03a2dd85d7b017cd67bbc9e9c25d5fa"
+        },
+        "Weibull": {
+          "reference_key": "independent/Weibull",
+          "sha256": "bf5a081ac64a3c4bdd8ae2c2e676206065ff4544eb332b2e6e55f931dc3fd430"
+        },
+        "Laplace": {
+          "reference_key": "independent/Laplace",
+          "sha256": "be2da6c96fc0bea8271624fe959374f00d329d43d4e1b8c5de057ebe34a09e71"
+        },
+        "Logistic": {
+          "reference_key": "independent/Logistic",
+          "sha256": "11323be063e3372ea0142c85a435d9ded01f8ad0e62d341d52ee4ff42f60bb76"
+        },
+        "Bernoulli": {
+          "reference_key": "independent/Bernoulli",
+          "sha256": "6b5437d0ac9955ec87629fcabffcbfa0b402904598c71fe18b70cf9b09b67210"
+        },
+        "Binomial": {
+          "reference_key": "independent/Binomial",
+          "sha256": "24ab441ef76fe050f13fb03a9035f74c174c47f6ab7b6e35b3b3953bc4ed5f7d"
+        },
+        "Poisson": {
+          "reference_key": "independent/Poisson",
+          "sha256": "0d6a5a3ca62af84c4291cff209a53c412c8b6cbb741ca950638e2fa2c09d1ba1"
+        }
+      }
+    },
+    "DeepSeek-V3.2": {
+      "batch": {
+        "Uniform": {
+          "reference_key": "batch/Uniform",
+          "sha256": "b3826bcc79486f1bb6f6dc03df34252953a7bb2f334c5906c9ac056b2fc71a1c"
+        },
+        "Gaussian": {
+          "reference_key": "batch/Gaussian",
+          "sha256": "fa631dc92b4b048a9d558307980c35fb8c54304e4b0caaccbe8bc4916edf9570"
+        },
+        "Beta": {
+          "reference_key": "batch/Beta",
+          "sha256": "f3f167bbd446694a673999394b3409e5b77f432dda6554d37d25541eb14c4de9"
+        },
+        "Exponential": {
+          "reference_key": "batch/Exponential",
+          "sha256": "f9a4029d709e728e3ae7e8b44f82632c97ef91836fb01c9b0fc7d8cc8a60584f"
+        },
+        "Cauchy": {
+          "reference_key": "batch/Cauchy",
+          "sha256": "99ebd845ffd0771076100dd089c78f86208f2467a2a939760516f2af6199ef59"
+        },
+        "TDistribution": {
+          "reference_key": "batch/TDistribution",
+          "sha256": "b414141cbead39fe50d64040f9bb320e76abc4c2ee20b4a5600784d7c3717edb"
+        },
+        "ChiSquare": {
+          "reference_key": "batch/ChiSquare",
+          "sha256": "2a99a64a67bb2c75d3993c29392cbbf0dc077265e4063603d37b5a3b1aad081f"
+        },
+        "FDistribution": {
+          "reference_key": "batch/FDistribution",
+          "sha256": "8fe64c1e2f7dd7baf8d86a8e9b07cf58a84bf042d184f7e9f130bdfb25c93293"
+        },
+        "Gamma": {
+          "reference_key": "batch/Gamma",
+          "sha256": "8e43c5c867f042570937fa193cfb6fa76367b41335a76064e99f0a3196e4e36d"
+        },
+        "Weibull": {
+          "reference_key": "batch/Weibull",
+          "sha256": "c9204e85de72dbca2630d3ed6666c72c7de98ac6affdc08f2f0a06913ca2520b"
+        },
+        "Laplace": {
+          "reference_key": "batch/Laplace",
+          "sha256": "b9cbe79c92dfbb3e72aa326b911e95b542be36235dd1675e93f9f77e673ee66e"
+        },
+        "Logistic": {
+          "reference_key": "batch/Logistic",
+          "sha256": "e9ca517083dac58769c02d7aaa745c9f037b503c38f750b3a6e34e8b57307188"
+        },
+        "Bernoulli": {
+          "reference_key": "batch/Bernoulli",
+          "sha256": "fa43dd955f0d489627ece9c5fa68a44115f9abf06e4bca54fc2a123785f38ebb"
+        },
+        "Binomial": {
+          "reference_key": "batch/Binomial",
+          "sha256": "67021a9d00dfa982a68e342868e7ca72aad6f5fa24ae7249f7b0218d0d9c9cee"
+        },
+        "Poisson": {
+          "reference_key": "batch/Poisson",
+          "sha256": "aec0e07115a1ca5d8f68e148e928a6e2c0b0c859992c631d15dcbb1c2758bf3f"
+        }
+      },
+      "independent": {
+        "Uniform": {
+          "reference_key": "independent/Uniform",
+          "sha256": "7c010ae4036318eda1ace96efeb594757442b5cdad9749a9f0c491833fab1de6"
+        },
+        "Gaussian": {
+          "reference_key": "independent/Gaussian",
+          "sha256": "65ef753509efd042fecdd76f56f378c8967fb9ff0516a085f0b37f464c0080f2"
+        },
+        "Beta": {
+          "reference_key": "independent/Beta",
+          "sha256": "2521bd783b0cb07a64316bdbe63942997be6458d544776449808a3cab5b1ed61"
+        },
+        "Exponential": {
+          "reference_key": "independent/Exponential",
+          "sha256": "def5ee10eaa708e7091fc09e047f718d5352cdbab69f8200050372d830e95a2d"
+        },
+        "Cauchy": {
+          "reference_key": "independent/Cauchy",
+          "sha256": "7a99c1d403f52b6ad2a5a8efb195609e1d1192906835b835e852dfee19775eda"
+        },
+        "TDistribution": {
+          "reference_key": "independent/TDistribution",
+          "sha256": "56a6c25e2a538e36c89610741ad0ea9545f8dcf4cd03088b0f7cf57ed561f6c2"
+        },
+        "ChiSquare": {
+          "reference_key": "independent/ChiSquare",
+          "sha256": "47df23b2a81a118254b7b49320584e69c7bd5c102c368789439273e721d53a55"
+        },
+        "FDistribution": {
+          "reference_key": "independent/FDistribution",
+          "sha256": "752cac583a65e5907817a21365ee991edff068a9bdf23215d779a4dae05bb24e"
+        },
+        "Gamma": {
+          "reference_key": "independent/Gamma",
+          "sha256": "7b78c90aab4bc416ea6938da59036d7bf03a2dd85d7b017cd67bbc9e9c25d5fa"
+        },
+        "Weibull": {
+          "reference_key": "independent/Weibull",
+          "sha256": "bf5a081ac64a3c4bdd8ae2c2e676206065ff4544eb332b2e6e55f931dc3fd430"
+        },
+        "Laplace": {
+          "reference_key": "independent/Laplace",
+          "sha256": "be2da6c96fc0bea8271624fe959374f00d329d43d4e1b8c5de057ebe34a09e71"
+        },
+        "Logistic": {
+          "reference_key": "independent/Logistic",
+          "sha256": "11323be063e3372ea0142c85a435d9ded01f8ad0e62d341d52ee4ff42f60bb76"
+        },
+        "Bernoulli": {
+          "reference_key": "independent/Bernoulli",
+          "sha256": "6b5437d0ac9955ec87629fcabffcbfa0b402904598c71fe18b70cf9b09b67210"
+        },
+        "Binomial": {
+          "reference_key": "independent/Binomial",
+          "sha256": "24ab441ef76fe050f13fb03a9035f74c174c47f6ab7b6e35b3b3953bc4ed5f7d"
+        },
+        "Poisson": {
+          "reference_key": "independent/Poisson",
+          "sha256": "0d6a5a3ca62af84c4291cff209a53c412c8b6cbb741ca950638e2fa2c09d1ba1"
+        }
+      }
+    },
+    "Qwen3": {
+      "batch": {
+        "Uniform": {
+          "reference_key": "batch/Uniform",
+          "sha256": "b3826bcc79486f1bb6f6dc03df34252953a7bb2f334c5906c9ac056b2fc71a1c"
+        },
+        "Gaussian": {
+          "reference_key": "batch/Gaussian",
+          "sha256": "fa631dc92b4b048a9d558307980c35fb8c54304e4b0caaccbe8bc4916edf9570"
+        },
+        "Beta": {
+          "reference_key": "batch/Beta",
+          "sha256": "f3f167bbd446694a673999394b3409e5b77f432dda6554d37d25541eb14c4de9"
+        },
+        "Exponential": {
+          "reference_key": "batch/Exponential",
+          "sha256": "f9a4029d709e728e3ae7e8b44f82632c97ef91836fb01c9b0fc7d8cc8a60584f"
+        },
+        "Cauchy": {
+          "reference_key": "batch/Cauchy",
+          "sha256": "99ebd845ffd0771076100dd089c78f86208f2467a2a939760516f2af6199ef59"
+        },
+        "TDistribution": {
+          "reference_key": "batch/TDistribution",
+          "sha256": "b414141cbead39fe50d64040f9bb320e76abc4c2ee20b4a5600784d7c3717edb"
+        },
+        "ChiSquare": {
+          "reference_key": "batch/ChiSquare",
+          "sha256": "2a99a64a67bb2c75d3993c29392cbbf0dc077265e4063603d37b5a3b1aad081f"
+        },
+        "FDistribution": {
+          "reference_key": "batch/FDistribution",
+          "sha256": "8fe64c1e2f7dd7baf8d86a8e9b07cf58a84bf042d184f7e9f130bdfb25c93293"
+        },
+        "Gamma": {
+          "reference_key": "batch/Gamma",
+          "sha256": "8e43c5c867f042570937fa193cfb6fa76367b41335a76064e99f0a3196e4e36d"
+        },
+        "Weibull": {
+          "reference_key": "batch/Weibull",
+          "sha256": "c9204e85de72dbca2630d3ed6666c72c7de98ac6affdc08f2f0a06913ca2520b"
+        },
+        "Laplace": {
+          "reference_key": "batch/Laplace",
+          "sha256": "b9cbe79c92dfbb3e72aa326b911e95b542be36235dd1675e93f9f77e673ee66e"
+        },
+        "Logistic": {
+          "reference_key": "batch/Logistic",
+          "sha256": "e9ca517083dac58769c02d7aaa745c9f037b503c38f750b3a6e34e8b57307188"
+        },
+        "Bernoulli": {
+          "reference_key": "batch/Bernoulli",
+          "sha256": "fa43dd955f0d489627ece9c5fa68a44115f9abf06e4bca54fc2a123785f38ebb"
+        },
+        "Binomial": {
+          "reference_key": "batch/Binomial",
+          "sha256": "67021a9d00dfa982a68e342868e7ca72aad6f5fa24ae7249f7b0218d0d9c9cee"
+        },
+        "Poisson": {
+          "reference_key": "batch/Poisson",
+          "sha256": "aec0e07115a1ca5d8f68e148e928a6e2c0b0c859992c631d15dcbb1c2758bf3f"
+        }
+      },
+      "independent": {
+        "Uniform": {
+          "reference_key": "independent/Uniform",
+          "sha256": "7c010ae4036318eda1ace96efeb594757442b5cdad9749a9f0c491833fab1de6"
+        },
+        "Gaussian": {
+          "reference_key": "independent/Gaussian",
+          "sha256": "65ef753509efd042fecdd76f56f378c8967fb9ff0516a085f0b37f464c0080f2"
+        },
+        "Beta": {
+          "reference_key": "independent/Beta",
+          "sha256": "2521bd783b0cb07a64316bdbe63942997be6458d544776449808a3cab5b1ed61"
+        },
+        "Exponential": {
+          "reference_key": "independent/Exponential",
+          "sha256": "def5ee10eaa708e7091fc09e047f718d5352cdbab69f8200050372d830e95a2d"
+        },
+        "Cauchy": {
+          "reference_key": "independent/Cauchy",
+          "sha256": "7a99c1d403f52b6ad2a5a8efb195609e1d1192906835b835e852dfee19775eda"
+        },
+        "TDistribution": {
+          "reference_key": "independent/TDistribution",
+          "sha256": "56a6c25e2a538e36c89610741ad0ea9545f8dcf4cd03088b0f7cf57ed561f6c2"
+        },
+        "ChiSquare": {
+          "reference_key": "independent/ChiSquare",
+          "sha256": "47df23b2a81a118254b7b49320584e69c7bd5c102c368789439273e721d53a55"
+        },
+        "FDistribution": {
+          "reference_key": "independent/FDistribution",
+          "sha256": "752cac583a65e5907817a21365ee991edff068a9bdf23215d779a4dae05bb24e"
+        },
+        "Gamma": {
+          "reference_key": "independent/Gamma",
+          "sha256": "7b78c90aab4bc416ea6938da59036d7bf03a2dd85d7b017cd67bbc9e9c25d5fa"
+        },
+        "Weibull": {
+          "reference_key": "independent/Weibull",
+          "sha256": "bf5a081ac64a3c4bdd8ae2c2e676206065ff4544eb332b2e6e55f931dc3fd430"
+        },
+        "Laplace": {
+          "reference_key": "independent/Laplace",
+          "sha256": "be2da6c96fc0bea8271624fe959374f00d329d43d4e1b8c5de057ebe34a09e71"
+        },
+        "Logistic": {
+          "reference_key": "independent/Logistic",
+          "sha256": "11323be063e3372ea0142c85a435d9ded01f8ad0e62d341d52ee4ff42f60bb76"
+        },
+        "Bernoulli": {
+          "reference_key": "independent/Bernoulli",
+          "sha256": "6b5437d0ac9955ec87629fcabffcbfa0b402904598c71fe18b70cf9b09b67210"
+        },
+        "Binomial": {
+          "reference_key": "independent/Binomial",
+          "sha256": "24ab441ef76fe050f13fb03a9035f74c174c47f6ab7b6e35b3b3953bc4ed5f7d"
+        },
+        "Poisson": {
+          "reference_key": "independent/Poisson",
+          "sha256": "0d6a5a3ca62af84c4291cff209a53c412c8b6cbb741ca950638e2fa2c09d1ba1"
+        }
+      }
+    },
+    "Gemma-3": {
+      "batch": {
+        "Uniform": {
+          "reference_key": "batch/Uniform",
+          "sha256": "b3826bcc79486f1bb6f6dc03df34252953a7bb2f334c5906c9ac056b2fc71a1c"
+        },
+        "Gaussian": {
+          "reference_key": "batch/Gaussian",
+          "sha256": "fa631dc92b4b048a9d558307980c35fb8c54304e4b0caaccbe8bc4916edf9570"
+        },
+        "Beta": {
+          "reference_key": "batch/Beta",
+          "sha256": "f3f167bbd446694a673999394b3409e5b77f432dda6554d37d25541eb14c4de9"
+        },
+        "Exponential": {
+          "reference_key": "batch/Exponential",
+          "sha256": "f9a4029d709e728e3ae7e8b44f82632c97ef91836fb01c9b0fc7d8cc8a60584f"
+        },
+        "Cauchy": {
+          "reference_key": "batch/Cauchy",
+          "sha256": "99ebd845ffd0771076100dd089c78f86208f2467a2a939760516f2af6199ef59"
+        },
+        "TDistribution": {
+          "reference_key": "batch/TDistribution",
+          "sha256": "b414141cbead39fe50d64040f9bb320e76abc4c2ee20b4a5600784d7c3717edb"
+        },
+        "ChiSquare": {
+          "reference_key": "batch/ChiSquare",
+          "sha256": "2a99a64a67bb2c75d3993c29392cbbf0dc077265e4063603d37b5a3b1aad081f"
+        },
+        "FDistribution": {
+          "reference_key": "batch/FDistribution",
+          "sha256": "8fe64c1e2f7dd7baf8d86a8e9b07cf58a84bf042d184f7e9f130bdfb25c93293"
+        },
+        "Gamma": {
+          "reference_key": "batch/Gamma",
+          "sha256": "8e43c5c867f042570937fa193cfb6fa76367b41335a76064e99f0a3196e4e36d"
+        },
+        "Weibull": {
+          "reference_key": "batch/Weibull",
+          "sha256": "c9204e85de72dbca2630d3ed6666c72c7de98ac6affdc08f2f0a06913ca2520b"
+        },
+        "Laplace": {
+          "reference_key": "batch/Laplace",
+          "sha256": "b9cbe79c92dfbb3e72aa326b911e95b542be36235dd1675e93f9f77e673ee66e"
+        },
+        "Logistic": {
+          "reference_key": "batch/Logistic",
+          "sha256": "e9ca517083dac58769c02d7aaa745c9f037b503c38f750b3a6e34e8b57307188"
+        },
+        "Bernoulli": {
+          "reference_key": "batch/Bernoulli",
+          "sha256": "fa43dd955f0d489627ece9c5fa68a44115f9abf06e4bca54fc2a123785f38ebb"
+        },
+        "Binomial": {
+          "reference_key": "batch/Binomial",
+          "sha256": "67021a9d00dfa982a68e342868e7ca72aad6f5fa24ae7249f7b0218d0d9c9cee"
+        },
+        "Poisson": {
+          "reference_key": "batch/Poisson",
+          "sha256": "aec0e07115a1ca5d8f68e148e928a6e2c0b0c859992c631d15dcbb1c2758bf3f"
+        }
+      },
+      "independent": {
+        "Uniform": {
+          "reference_key": "independent/Uniform",
+          "sha256": "7c010ae4036318eda1ace96efeb594757442b5cdad9749a9f0c491833fab1de6"
+        },
+        "Gaussian": {
+          "reference_key": "independent/Gaussian",
+          "sha256": "65ef753509efd042fecdd76f56f378c8967fb9ff0516a085f0b37f464c0080f2"
+        },
+        "Beta": {
+          "reference_key": "independent/Beta",
+          "sha256": "2521bd783b0cb07a64316bdbe63942997be6458d544776449808a3cab5b1ed61"
+        },
+        "Exponential": {
+          "reference_key": "independent/Exponential",
+          "sha256": "def5ee10eaa708e7091fc09e047f718d5352cdbab69f8200050372d830e95a2d"
+        },
+        "Cauchy": {
+          "reference_key": "independent/Cauchy",
+          "sha256": "7a99c1d403f52b6ad2a5a8efb195609e1d1192906835b835e852dfee19775eda"
+        },
+        "TDistribution": {
+          "reference_key": "independent/TDistribution",
+          "sha256": "56a6c25e2a538e36c89610741ad0ea9545f8dcf4cd03088b0f7cf57ed561f6c2"
+        },
+        "ChiSquare": {
+          "reference_key": "independent/ChiSquare",
+          "sha256": "47df23b2a81a118254b7b49320584e69c7bd5c102c368789439273e721d53a55"
+        },
+        "FDistribution": {
+          "reference_key": "independent/FDistribution",
+          "sha256": "752cac583a65e5907817a21365ee991edff068a9bdf23215d779a4dae05bb24e"
+        },
+        "Gamma": {
+          "reference_key": "independent/Gamma",
+          "sha256": "7b78c90aab4bc416ea6938da59036d7bf03a2dd85d7b017cd67bbc9e9c25d5fa"
+        },
+        "Weibull": {
+          "reference_key": "independent/Weibull",
+          "sha256": "bf5a081ac64a3c4bdd8ae2c2e676206065ff4544eb332b2e6e55f931dc3fd430"
+        },
+        "Laplace": {
+          "reference_key": "independent/Laplace",
+          "sha256": "be2da6c96fc0bea8271624fe959374f00d329d43d4e1b8c5de057ebe34a09e71"
+        },
+        "Logistic": {
+          "reference_key": "independent/Logistic",
+          "sha256": "11323be063e3372ea0142c85a435d9ded01f8ad0e62d341d52ee4ff42f60bb76"
+        },
+        "Bernoulli": {
+          "reference_key": "independent/Bernoulli",
+          "sha256": "6b5437d0ac9955ec87629fcabffcbfa0b402904598c71fe18b70cf9b09b67210"
+        },
+        "Binomial": {
+          "reference_key": "independent/Binomial",
+          "sha256": "24ab441ef76fe050f13fb03a9035f74c174c47f6ab7b6e35b3b3953bc4ed5f7d"
+        },
+        "Poisson": {
+          "reference_key": "independent/Poisson",
+          "sha256": "0d6a5a3ca62af84c4291cff209a53c412c8b6cbb741ca950638e2fa2c09d1ba1"
+        }
+      }
+    },
+    "Mistral-3.2": {
+      "batch": {
+        "Uniform": {
+          "reference_key": "batch/Uniform",
+          "sha256": "b3826bcc79486f1bb6f6dc03df34252953a7bb2f334c5906c9ac056b2fc71a1c"
+        },
+        "Gaussian": {
+          "reference_key": "batch/Gaussian",
+          "sha256": "fa631dc92b4b048a9d558307980c35fb8c54304e4b0caaccbe8bc4916edf9570"
+        },
+        "Beta": {
+          "reference_key": "batch/Beta",
+          "sha256": "f3f167bbd446694a673999394b3409e5b77f432dda6554d37d25541eb14c4de9"
+        },
+        "Exponential": {
+          "reference_key": "batch/Exponential",
+          "sha256": "f9a4029d709e728e3ae7e8b44f82632c97ef91836fb01c9b0fc7d8cc8a60584f"
+        },
+        "Cauchy": {
+          "reference_key": "batch/Cauchy",
+          "sha256": "99ebd845ffd0771076100dd089c78f86208f2467a2a939760516f2af6199ef59"
+        },
+        "TDistribution": {
+          "reference_key": "batch/TDistribution",
+          "sha256": "b414141cbead39fe50d64040f9bb320e76abc4c2ee20b4a5600784d7c3717edb"
+        },
+        "ChiSquare": {
+          "reference_key": "batch/ChiSquare",
+          "sha256": "2a99a64a67bb2c75d3993c29392cbbf0dc077265e4063603d37b5a3b1aad081f"
+        },
+        "FDistribution": {
+          "reference_key": "batch/FDistribution",
+          "sha256": "8fe64c1e2f7dd7baf8d86a8e9b07cf58a84bf042d184f7e9f130bdfb25c93293"
+        },
+        "Gamma": {
+          "reference_key": "batch/Gamma",
+          "sha256": "8e43c5c867f042570937fa193cfb6fa76367b41335a76064e99f0a3196e4e36d"
+        },
+        "Weibull": {
+          "reference_key": "batch/Weibull",
+          "sha256": "c9204e85de72dbca2630d3ed6666c72c7de98ac6affdc08f2f0a06913ca2520b"
+        },
+        "Laplace": {
+          "reference_key": "batch/Laplace",
+          "sha256": "b9cbe79c92dfbb3e72aa326b911e95b542be36235dd1675e93f9f77e673ee66e"
+        },
+        "Logistic": {
+          "reference_key": "batch/Logistic",
+          "sha256": "e9ca517083dac58769c02d7aaa745c9f037b503c38f750b3a6e34e8b57307188"
+        },
+        "Bernoulli": {
+          "reference_key": "batch/Bernoulli",
+          "sha256": "fa43dd955f0d489627ece9c5fa68a44115f9abf06e4bca54fc2a123785f38ebb"
+        },
+        "Binomial": {
+          "reference_key": "batch/Binomial",
+          "sha256": "67021a9d00dfa982a68e342868e7ca72aad6f5fa24ae7249f7b0218d0d9c9cee"
+        },
+        "Poisson": {
+          "reference_key": "batch/Poisson",
+          "sha256": "aec0e07115a1ca5d8f68e148e928a6e2c0b0c859992c631d15dcbb1c2758bf3f"
+        }
+      },
+      "independent": {
+        "Uniform": {
+          "reference_key": "independent/Uniform",
+          "sha256": "7c010ae4036318eda1ace96efeb594757442b5cdad9749a9f0c491833fab1de6"
+        },
+        "Gaussian": {
+          "reference_key": "independent/Gaussian",
+          "sha256": "65ef753509efd042fecdd76f56f378c8967fb9ff0516a085f0b37f464c0080f2"
+        },
+        "Beta": {
+          "reference_key": "independent/Beta",
+          "sha256": "2521bd783b0cb07a64316bdbe63942997be6458d544776449808a3cab5b1ed61"
+        },
+        "Exponential": {
+          "reference_key": "independent/Exponential",
+          "sha256": "def5ee10eaa708e7091fc09e047f718d5352cdbab69f8200050372d830e95a2d"
+        },
+        "Cauchy": {
+          "reference_key": "independent/Cauchy",
+          "sha256": "7a99c1d403f52b6ad2a5a8efb195609e1d1192906835b835e852dfee19775eda"
+        },
+        "TDistribution": {
+          "reference_key": "independent/TDistribution",
+          "sha256": "56a6c25e2a538e36c89610741ad0ea9545f8dcf4cd03088b0f7cf57ed561f6c2"
+        },
+        "ChiSquare": {
+          "reference_key": "independent/ChiSquare",
+          "sha256": "47df23b2a81a118254b7b49320584e69c7bd5c102c368789439273e721d53a55"
+        },
+        "FDistribution": {
+          "reference_key": "independent/FDistribution",
+          "sha256": "752cac583a65e5907817a21365ee991edff068a9bdf23215d779a4dae05bb24e"
+        },
+        "Gamma": {
+          "reference_key": "independent/Gamma",
+          "sha256": "7b78c90aab4bc416ea6938da59036d7bf03a2dd85d7b017cd67bbc9e9c25d5fa"
+        },
+        "Weibull": {
+          "reference_key": "independent/Weibull",
+          "sha256": "bf5a081ac64a3c4bdd8ae2c2e676206065ff4544eb332b2e6e55f931dc3fd430"
+        },
+        "Laplace": {
+          "reference_key": "independent/Laplace",
+          "sha256": "be2da6c96fc0bea8271624fe959374f00d329d43d4e1b8c5de057ebe34a09e71"
+        },
+        "Logistic": {
+          "reference_key": "independent/Logistic",
+          "sha256": "11323be063e3372ea0142c85a435d9ded01f8ad0e62d341d52ee4ff42f60bb76"
+        },
+        "Bernoulli": {
+          "reference_key": "independent/Bernoulli",
+          "sha256": "6b5437d0ac9955ec87629fcabffcbfa0b402904598c71fe18b70cf9b09b67210"
+        },
+        "Binomial": {
+          "reference_key": "independent/Binomial",
+          "sha256": "24ab441ef76fe050f13fb03a9035f74c174c47f6ab7b6e35b3b3953bc4ed5f7d"
+        },
+        "Poisson": {
+          "reference_key": "independent/Poisson",
+          "sha256": "0d6a5a3ca62af84c4291cff209a53c412c8b6cbb741ca950638e2fa2c09d1ba1"
+        }
+      }
+    },
+    "Kimi-K2": {
+      "batch": {
+        "Uniform": {
+          "reference_key": "batch/Uniform",
+          "sha256": "b3826bcc79486f1bb6f6dc03df34252953a7bb2f334c5906c9ac056b2fc71a1c"
+        },
+        "Gaussian": {
+          "reference_key": "batch/Gaussian",
+          "sha256": "fa631dc92b4b048a9d558307980c35fb8c54304e4b0caaccbe8bc4916edf9570"
+        },
+        "Beta": {
+          "reference_key": "batch/Beta",
+          "sha256": "f3f167bbd446694a673999394b3409e5b77f432dda6554d37d25541eb14c4de9"
+        },
+        "Exponential": {
+          "reference_key": "batch/Exponential",
+          "sha256": "f9a4029d709e728e3ae7e8b44f82632c97ef91836fb01c9b0fc7d8cc8a60584f"
+        },
+        "Cauchy": {
+          "reference_key": "batch/Cauchy",
+          "sha256": "99ebd845ffd0771076100dd089c78f86208f2467a2a939760516f2af6199ef59"
+        },
+        "TDistribution": {
+          "reference_key": "batch/TDistribution",
+          "sha256": "b414141cbead39fe50d64040f9bb320e76abc4c2ee20b4a5600784d7c3717edb"
+        },
+        "ChiSquare": {
+          "reference_key": "batch/ChiSquare",
+          "sha256": "2a99a64a67bb2c75d3993c29392cbbf0dc077265e4063603d37b5a3b1aad081f"
+        },
+        "FDistribution": {
+          "reference_key": "batch/FDistribution",
+          "sha256": "8fe64c1e2f7dd7baf8d86a8e9b07cf58a84bf042d184f7e9f130bdfb25c93293"
+        },
+        "Gamma": {
+          "reference_key": "batch/Gamma",
+          "sha256": "8e43c5c867f042570937fa193cfb6fa76367b41335a76064e99f0a3196e4e36d"
+        },
+        "Weibull": {
+          "reference_key": "batch/Weibull",
+          "sha256": "c9204e85de72dbca2630d3ed6666c72c7de98ac6affdc08f2f0a06913ca2520b"
+        },
+        "Laplace": {
+          "reference_key": "batch/Laplace",
+          "sha256": "b9cbe79c92dfbb3e72aa326b911e95b542be36235dd1675e93f9f77e673ee66e"
+        },
+        "Logistic": {
+          "reference_key": "batch/Logistic",
+          "sha256": "e9ca517083dac58769c02d7aaa745c9f037b503c38f750b3a6e34e8b57307188"
+        },
+        "Bernoulli": {
+          "reference_key": "batch/Bernoulli",
+          "sha256": "fa43dd955f0d489627ece9c5fa68a44115f9abf06e4bca54fc2a123785f38ebb"
+        },
+        "Binomial": {
+          "reference_key": "batch/Binomial",
+          "sha256": "67021a9d00dfa982a68e342868e7ca72aad6f5fa24ae7249f7b0218d0d9c9cee"
+        },
+        "Poisson": {
+          "reference_key": "batch/Poisson",
+          "sha256": "aec0e07115a1ca5d8f68e148e928a6e2c0b0c859992c631d15dcbb1c2758bf3f"
+        }
+      },
+      "independent": {
+        "Uniform": {
+          "reference_key": "independent/Uniform",
+          "sha256": "7c010ae4036318eda1ace96efeb594757442b5cdad9749a9f0c491833fab1de6"
+        },
+        "Gaussian": {
+          "reference_key": "independent/Gaussian",
+          "sha256": "65ef753509efd042fecdd76f56f378c8967fb9ff0516a085f0b37f464c0080f2"
+        },
+        "Beta": {
+          "reference_key": "independent/Beta",
+          "sha256": "2521bd783b0cb07a64316bdbe63942997be6458d544776449808a3cab5b1ed61"
+        },
+        "Exponential": {
+          "reference_key": "independent/Exponential",
+          "sha256": "def5ee10eaa708e7091fc09e047f718d5352cdbab69f8200050372d830e95a2d"
+        },
+        "Cauchy": {
+          "reference_key": "independent/Cauchy",
+          "sha256": "7a99c1d403f52b6ad2a5a8efb195609e1d1192906835b835e852dfee19775eda"
+        },
+        "TDistribution": {
+          "reference_key": "independent/TDistribution",
+          "sha256": "56a6c25e2a538e36c89610741ad0ea9545f8dcf4cd03088b0f7cf57ed561f6c2"
+        },
+        "ChiSquare": {
+          "reference_key": "independent/ChiSquare",
+          "sha256": "47df23b2a81a118254b7b49320584e69c7bd5c102c368789439273e721d53a55"
+        },
+        "FDistribution": {
+          "reference_key": "independent/FDistribution",
+          "sha256": "752cac583a65e5907817a21365ee991edff068a9bdf23215d779a4dae05bb24e"
+        },
+        "Gamma": {
+          "reference_key": "independent/Gamma",
+          "sha256": "7b78c90aab4bc416ea6938da59036d7bf03a2dd85d7b017cd67bbc9e9c25d5fa"
+        },
+        "Weibull": {
+          "reference_key": "independent/Weibull",
+          "sha256": "bf5a081ac64a3c4bdd8ae2c2e676206065ff4544eb332b2e6e55f931dc3fd430"
+        },
+        "Laplace": {
+          "reference_key": "independent/Laplace",
+          "sha256": "be2da6c96fc0bea8271624fe959374f00d329d43d4e1b8c5de057ebe34a09e71"
+        },
+        "Logistic": {
+          "reference_key": "independent/Logistic",
+          "sha256": "11323be063e3372ea0142c85a435d9ded01f8ad0e62d341d52ee4ff42f60bb76"
+        },
+        "Bernoulli": {
+          "reference_key": "independent/Bernoulli",
+          "sha256": "6b5437d0ac9955ec87629fcabffcbfa0b402904598c71fe18b70cf9b09b67210"
+        },
+        "Binomial": {
+          "reference_key": "independent/Binomial",
+          "sha256": "24ab441ef76fe050f13fb03a9035f74c174c47f6ab7b6e35b3b3953bc4ed5f7d"
+        },
+        "Poisson": {
+          "reference_key": "independent/Poisson",
+          "sha256": "0d6a5a3ca62af84c4291cff209a53c412c8b6cbb741ca950638e2fa2c09d1ba1"
+        }
+      }
+    },
+    "Llama-3.3": {
+      "batch": {
+        "Uniform": {
+          "reference_key": "batch/Uniform",
+          "sha256": "b3826bcc79486f1bb6f6dc03df34252953a7bb2f334c5906c9ac056b2fc71a1c"
+        },
+        "Gaussian": {
+          "reference_key": "batch/Gaussian",
+          "sha256": "fa631dc92b4b048a9d558307980c35fb8c54304e4b0caaccbe8bc4916edf9570"
+        },
+        "Beta": {
+          "reference_key": "batch/Beta",
+          "sha256": "f3f167bbd446694a673999394b3409e5b77f432dda6554d37d25541eb14c4de9"
+        },
+        "Exponential": {
+          "reference_key": "batch/Exponential",
+          "sha256": "f9a4029d709e728e3ae7e8b44f82632c97ef91836fb01c9b0fc7d8cc8a60584f"
+        },
+        "Cauchy": {
+          "reference_key": "batch/Cauchy",
+          "sha256": "99ebd845ffd0771076100dd089c78f86208f2467a2a939760516f2af6199ef59"
+        },
+        "TDistribution": {
+          "reference_key": "batch/TDistribution",
+          "sha256": "b414141cbead39fe50d64040f9bb320e76abc4c2ee20b4a5600784d7c3717edb"
+        },
+        "ChiSquare": {
+          "reference_key": "batch/ChiSquare",
+          "sha256": "2a99a64a67bb2c75d3993c29392cbbf0dc077265e4063603d37b5a3b1aad081f"
+        },
+        "FDistribution": {
+          "reference_key": "batch/FDistribution",
+          "sha256": "8fe64c1e2f7dd7baf8d86a8e9b07cf58a84bf042d184f7e9f130bdfb25c93293"
+        },
+        "Gamma": {
+          "reference_key": "batch/Gamma",
+          "sha256": "8e43c5c867f042570937fa193cfb6fa76367b41335a76064e99f0a3196e4e36d"
+        },
+        "Weibull": {
+          "reference_key": "batch/Weibull",
+          "sha256": "c9204e85de72dbca2630d3ed6666c72c7de98ac6affdc08f2f0a06913ca2520b"
+        },
+        "Laplace": {
+          "reference_key": "batch/Laplace",
+          "sha256": "b9cbe79c92dfbb3e72aa326b911e95b542be36235dd1675e93f9f77e673ee66e"
+        },
+        "Logistic": {
+          "reference_key": "batch/Logistic",
+          "sha256": "e9ca517083dac58769c02d7aaa745c9f037b503c38f750b3a6e34e8b57307188"
+        },
+        "Bernoulli": {
+          "reference_key": "batch/Bernoulli",
+          "sha256": "fa43dd955f0d489627ece9c5fa68a44115f9abf06e4bca54fc2a123785f38ebb"
+        },
+        "Binomial": {
+          "reference_key": "batch/Binomial",
+          "sha256": "67021a9d00dfa982a68e342868e7ca72aad6f5fa24ae7249f7b0218d0d9c9cee"
+        },
+        "Poisson": {
+          "reference_key": "batch/Poisson",
+          "sha256": "aec0e07115a1ca5d8f68e148e928a6e2c0b0c859992c631d15dcbb1c2758bf3f"
+        }
+      },
+      "independent": {
+        "Uniform": {
+          "reference_key": "independent/Uniform",
+          "sha256": "7c010ae4036318eda1ace96efeb594757442b5cdad9749a9f0c491833fab1de6"
+        },
+        "Gaussian": {
+          "reference_key": "independent/Gaussian",
+          "sha256": "65ef753509efd042fecdd76f56f378c8967fb9ff0516a085f0b37f464c0080f2"
+        },
+        "Beta": {
+          "reference_key": "independent/Beta",
+          "sha256": "2521bd783b0cb07a64316bdbe63942997be6458d544776449808a3cab5b1ed61"
+        },
+        "Exponential": {
+          "reference_key": "independent/Exponential",
+          "sha256": "def5ee10eaa708e7091fc09e047f718d5352cdbab69f8200050372d830e95a2d"
+        },
+        "Cauchy": {
+          "reference_key": "independent/Cauchy",
+          "sha256": "7a99c1d403f52b6ad2a5a8efb195609e1d1192906835b835e852dfee19775eda"
+        },
+        "TDistribution": {
+          "reference_key": "independent/TDistribution",
+          "sha256": "56a6c25e2a538e36c89610741ad0ea9545f8dcf4cd03088b0f7cf57ed561f6c2"
+        },
+        "ChiSquare": {
+          "reference_key": "independent/ChiSquare",
+          "sha256": "47df23b2a81a118254b7b49320584e69c7bd5c102c368789439273e721d53a55"
+        },
+        "FDistribution": {
+          "reference_key": "independent/FDistribution",
+          "sha256": "752cac583a65e5907817a21365ee991edff068a9bdf23215d779a4dae05bb24e"
+        },
+        "Gamma": {
+          "reference_key": "independent/Gamma",
+          "sha256": "7b78c90aab4bc416ea6938da59036d7bf03a2dd85d7b017cd67bbc9e9c25d5fa"
+        },
+        "Weibull": {
+          "reference_key": "independent/Weibull",
+          "sha256": "bf5a081ac64a3c4bdd8ae2c2e676206065ff4544eb332b2e6e55f931dc3fd430"
+        },
+        "Laplace": {
+          "reference_key": "independent/Laplace",
+          "sha256": "be2da6c96fc0bea8271624fe959374f00d329d43d4e1b8c5de057ebe34a09e71"
+        },
+        "Logistic": {
+          "reference_key": "independent/Logistic",
+          "sha256": "11323be063e3372ea0142c85a435d9ded01f8ad0e62d341d52ee4ff42f60bb76"
+        },
+        "Bernoulli": {
+          "reference_key": "independent/Bernoulli",
+          "sha256": "6b5437d0ac9955ec87629fcabffcbfa0b402904598c71fe18b70cf9b09b67210"
+        },
+        "Binomial": {
+          "reference_key": "independent/Binomial",
+          "sha256": "24ab441ef76fe050f13fb03a9035f74c174c47f6ab7b6e35b3b3953bc4ed5f7d"
+        },
+        "Poisson": {
+          "reference_key": "independent/Poisson",
+          "sha256": "0d6a5a3ca62af84c4291cff209a53c412c8b6cbb741ca950638e2fa2c09d1ba1"
+        }
+      }
+    },
+    "Llama-4": {
+      "batch": {
+        "Uniform": {
+          "reference_key": "batch/Uniform",
+          "sha256": "b3826bcc79486f1bb6f6dc03df34252953a7bb2f334c5906c9ac056b2fc71a1c"
+        },
+        "Gaussian": {
+          "reference_key": "batch/Gaussian",
+          "sha256": "fa631dc92b4b048a9d558307980c35fb8c54304e4b0caaccbe8bc4916edf9570"
+        },
+        "Beta": {
+          "reference_key": "batch/Beta",
+          "sha256": "f3f167bbd446694a673999394b3409e5b77f432dda6554d37d25541eb14c4de9"
+        },
+        "Exponential": {
+          "reference_key": "batch/Exponential",
+          "sha256": "f9a4029d709e728e3ae7e8b44f82632c97ef91836fb01c9b0fc7d8cc8a60584f"
+        },
+        "Cauchy": {
+          "reference_key": "batch/Cauchy",
+          "sha256": "99ebd845ffd0771076100dd089c78f86208f2467a2a939760516f2af6199ef59"
+        },
+        "TDistribution": {
+          "reference_key": "batch/TDistribution",
+          "sha256": "b414141cbead39fe50d64040f9bb320e76abc4c2ee20b4a5600784d7c3717edb"
+        },
+        "ChiSquare": {
+          "reference_key": "batch/ChiSquare",
+          "sha256": "2a99a64a67bb2c75d3993c29392cbbf0dc077265e4063603d37b5a3b1aad081f"
+        },
+        "FDistribution": {
+          "reference_key": "batch/FDistribution",
+          "sha256": "8fe64c1e2f7dd7baf8d86a8e9b07cf58a84bf042d184f7e9f130bdfb25c93293"
+        },
+        "Gamma": {
+          "reference_key": "batch/Gamma",
+          "sha256": "8e43c5c867f042570937fa193cfb6fa76367b41335a76064e99f0a3196e4e36d"
+        },
+        "Weibull": {
+          "reference_key": "batch/Weibull",
+          "sha256": "c9204e85de72dbca2630d3ed6666c72c7de98ac6affdc08f2f0a06913ca2520b"
+        },
+        "Laplace": {
+          "reference_key": "batch/Laplace",
+          "sha256": "b9cbe79c92dfbb3e72aa326b911e95b542be36235dd1675e93f9f77e673ee66e"
+        },
+        "Logistic": {
+          "reference_key": "batch/Logistic",
+          "sha256": "e9ca517083dac58769c02d7aaa745c9f037b503c38f750b3a6e34e8b57307188"
+        },
+        "Bernoulli": {
+          "reference_key": "batch/Bernoulli",
+          "sha256": "fa43dd955f0d489627ece9c5fa68a44115f9abf06e4bca54fc2a123785f38ebb"
+        },
+        "Binomial": {
+          "reference_key": "batch/Binomial",
+          "sha256": "67021a9d00dfa982a68e342868e7ca72aad6f5fa24ae7249f7b0218d0d9c9cee"
+        },
+        "Poisson": {
+          "reference_key": "batch/Poisson",
+          "sha256": "aec0e07115a1ca5d8f68e148e928a6e2c0b0c859992c631d15dcbb1c2758bf3f"
+        }
+      },
+      "independent": {
+        "Uniform": {
+          "reference_key": "independent/Uniform",
+          "sha256": "7c010ae4036318eda1ace96efeb594757442b5cdad9749a9f0c491833fab1de6"
+        },
+        "Gaussian": {
+          "reference_key": "independent/Gaussian",
+          "sha256": "65ef753509efd042fecdd76f56f378c8967fb9ff0516a085f0b37f464c0080f2"
+        },
+        "Beta": {
+          "reference_key": "independent/Beta",
+          "sha256": "2521bd783b0cb07a64316bdbe63942997be6458d544776449808a3cab5b1ed61"
+        },
+        "Exponential": {
+          "reference_key": "independent/Exponential",
+          "sha256": "def5ee10eaa708e7091fc09e047f718d5352cdbab69f8200050372d830e95a2d"
+        },
+        "Cauchy": {
+          "reference_key": "independent/Cauchy",
+          "sha256": "7a99c1d403f52b6ad2a5a8efb195609e1d1192906835b835e852dfee19775eda"
+        },
+        "TDistribution": {
+          "reference_key": "independent/TDistribution",
+          "sha256": "56a6c25e2a538e36c89610741ad0ea9545f8dcf4cd03088b0f7cf57ed561f6c2"
+        },
+        "ChiSquare": {
+          "reference_key": "independent/ChiSquare",
+          "sha256": "47df23b2a81a118254b7b49320584e69c7bd5c102c368789439273e721d53a55"
+        },
+        "FDistribution": {
+          "reference_key": "independent/FDistribution",
+          "sha256": "752cac583a65e5907817a21365ee991edff068a9bdf23215d779a4dae05bb24e"
+        },
+        "Gamma": {
+          "reference_key": "independent/Gamma",
+          "sha256": "7b78c90aab4bc416ea6938da59036d7bf03a2dd85d7b017cd67bbc9e9c25d5fa"
+        },
+        "Weibull": {
+          "reference_key": "independent/Weibull",
+          "sha256": "bf5a081ac64a3c4bdd8ae2c2e676206065ff4544eb332b2e6e55f931dc3fd430"
+        },
+        "Laplace": {
+          "reference_key": "independent/Laplace",
+          "sha256": "be2da6c96fc0bea8271624fe959374f00d329d43d4e1b8c5de057ebe34a09e71"
+        },
+        "Logistic": {
+          "reference_key": "independent/Logistic",
+          "sha256": "11323be063e3372ea0142c85a435d9ded01f8ad0e62d341d52ee4ff42f60bb76"
+        },
+        "Bernoulli": {
+          "reference_key": "independent/Bernoulli",
+          "sha256": "6b5437d0ac9955ec87629fcabffcbfa0b402904598c71fe18b70cf9b09b67210"
+        },
+        "Binomial": {
+          "reference_key": "independent/Binomial",
+          "sha256": "24ab441ef76fe050f13fb03a9035f74c174c47f6ab7b6e35b3b3953bc4ed5f7d"
+        },
+        "Poisson": {
+          "reference_key": "independent/Poisson",
+          "sha256": "0d6a5a3ca62af84c4291cff209a53c412c8b6cbb741ca950638e2fa2c09d1ba1"
+        }
+      }
+    },
+    "GPT-OSS": {
+      "batch": {
+        "Uniform": {
+          "reference_key": "batch/Uniform",
+          "sha256": "b3826bcc79486f1bb6f6dc03df34252953a7bb2f334c5906c9ac056b2fc71a1c"
+        },
+        "Gaussian": {
+          "reference_key": "batch/Gaussian",
+          "sha256": "fa631dc92b4b048a9d558307980c35fb8c54304e4b0caaccbe8bc4916edf9570"
+        },
+        "Beta": {
+          "reference_key": "batch/Beta",
+          "sha256": "f3f167bbd446694a673999394b3409e5b77f432dda6554d37d25541eb14c4de9"
+        },
+        "Exponential": {
+          "reference_key": "batch/Exponential",
+          "sha256": "f9a4029d709e728e3ae7e8b44f82632c97ef91836fb01c9b0fc7d8cc8a60584f"
+        },
+        "Cauchy": {
+          "reference_key": "batch/Cauchy",
+          "sha256": "99ebd845ffd0771076100dd089c78f86208f2467a2a939760516f2af6199ef59"
+        },
+        "TDistribution": {
+          "reference_key": "batch/TDistribution",
+          "sha256": "b414141cbead39fe50d64040f9bb320e76abc4c2ee20b4a5600784d7c3717edb"
+        },
+        "ChiSquare": {
+          "reference_key": "batch/ChiSquare",
+          "sha256": "2a99a64a67bb2c75d3993c29392cbbf0dc077265e4063603d37b5a3b1aad081f"
+        },
+        "FDistribution": {
+          "reference_key": "batch/FDistribution",
+          "sha256": "8fe64c1e2f7dd7baf8d86a8e9b07cf58a84bf042d184f7e9f130bdfb25c93293"
+        },
+        "Gamma": {
+          "reference_key": "batch/Gamma",
+          "sha256": "8e43c5c867f042570937fa193cfb6fa76367b41335a76064e99f0a3196e4e36d"
+        },
+        "Weibull": {
+          "reference_key": "batch/Weibull",
+          "sha256": "c9204e85de72dbca2630d3ed6666c72c7de98ac6affdc08f2f0a06913ca2520b"
+        },
+        "Laplace": {
+          "reference_key": "batch/Laplace",
+          "sha256": "b9cbe79c92dfbb3e72aa326b911e95b542be36235dd1675e93f9f77e673ee66e"
+        },
+        "Logistic": {
+          "reference_key": "batch/Logistic",
+          "sha256": "e9ca517083dac58769c02d7aaa745c9f037b503c38f750b3a6e34e8b57307188"
+        },
+        "Bernoulli": {
+          "reference_key": "batch/Bernoulli",
+          "sha256": "fa43dd955f0d489627ece9c5fa68a44115f9abf06e4bca54fc2a123785f38ebb"
+        },
+        "Binomial": {
+          "reference_key": "batch/Binomial",
+          "sha256": "67021a9d00dfa982a68e342868e7ca72aad6f5fa24ae7249f7b0218d0d9c9cee"
+        },
+        "Poisson": {
+          "reference_key": "batch/Poisson",
+          "sha256": "aec0e07115a1ca5d8f68e148e928a6e2c0b0c859992c631d15dcbb1c2758bf3f"
+        }
+      },
+      "independent": {
+        "Uniform": {
+          "reference_key": "independent/Uniform",
+          "sha256": "7c010ae4036318eda1ace96efeb594757442b5cdad9749a9f0c491833fab1de6"
+        },
+        "Gaussian": {
+          "reference_key": "independent/Gaussian",
+          "sha256": "65ef753509efd042fecdd76f56f378c8967fb9ff0516a085f0b37f464c0080f2"
+        },
+        "Beta": {
+          "reference_key": "independent/Beta",
+          "sha256": "2521bd783b0cb07a64316bdbe63942997be6458d544776449808a3cab5b1ed61"
+        },
+        "Exponential": {
+          "reference_key": "independent/Exponential",
+          "sha256": "def5ee10eaa708e7091fc09e047f718d5352cdbab69f8200050372d830e95a2d"
+        },
+        "Cauchy": {
+          "reference_key": "independent/Cauchy",
+          "sha256": "7a99c1d403f52b6ad2a5a8efb195609e1d1192906835b835e852dfee19775eda"
+        },
+        "TDistribution": {
+          "reference_key": "independent/TDistribution",
+          "sha256": "56a6c25e2a538e36c89610741ad0ea9545f8dcf4cd03088b0f7cf57ed561f6c2"
+        },
+        "ChiSquare": {
+          "reference_key": "independent/ChiSquare",
+          "sha256": "47df23b2a81a118254b7b49320584e69c7bd5c102c368789439273e721d53a55"
+        },
+        "FDistribution": {
+          "reference_key": "independent/FDistribution",
+          "sha256": "752cac583a65e5907817a21365ee991edff068a9bdf23215d779a4dae05bb24e"
+        },
+        "Gamma": {
+          "reference_key": "independent/Gamma",
+          "sha256": "7b78c90aab4bc416ea6938da59036d7bf03a2dd85d7b017cd67bbc9e9c25d5fa"
+        },
+        "Weibull": {
+          "reference_key": "independent/Weibull",
+          "sha256": "bf5a081ac64a3c4bdd8ae2c2e676206065ff4544eb332b2e6e55f931dc3fd430"
+        },
+        "Laplace": {
+          "reference_key": "independent/Laplace",
+          "sha256": "be2da6c96fc0bea8271624fe959374f00d329d43d4e1b8c5de057ebe34a09e71"
+        },
+        "Logistic": {
+          "reference_key": "independent/Logistic",
+          "sha256": "11323be063e3372ea0142c85a435d9ded01f8ad0e62d341d52ee4ff42f60bb76"
+        },
+        "Bernoulli": {
+          "reference_key": "independent/Bernoulli",
+          "sha256": "6b5437d0ac9955ec87629fcabffcbfa0b402904598c71fe18b70cf9b09b67210"
+        },
+        "Binomial": {
+          "reference_key": "independent/Binomial",
+          "sha256": "24ab441ef76fe050f13fb03a9035f74c174c47f6ab7b6e35b3b3953bc4ed5f7d"
+        },
+        "Poisson": {
+          "reference_key": "independent/Poisson",
+          "sha256": "0d6a5a3ca62af84c4291cff209a53c412c8b6cbb741ca950638e2fa2c09d1ba1"
+        }
+      }
+    }
+  }
+}

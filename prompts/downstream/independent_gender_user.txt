@@ -1,0 +1,16 @@
+You are generating text-to-image prompts that must follow a specific gender distribution.
+
+TARGET DISTRIBUTION (U.S. Census Bureau 2024):
+- Male: 49.49%
+- Female: 50.51%
+
+Your task: Generate ONE prompt. Randomly sample the gender according to the distribution above.
+- If you mentally "roll a dice", ~49.49% of the time pick Male, ~50.51% pick Female.
+
+Output format (EXACTLY):
+[Male] or [Female] followed by a creative prompt describing that person.
+
+Example:
+[Female] A woman reading a book at a cozy coffee shop.
+
+Generate ONE prompt now (remember to sample according to the 49.49%/50.51% distribution):

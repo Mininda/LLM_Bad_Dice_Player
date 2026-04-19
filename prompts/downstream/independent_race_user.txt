@@ -1,0 +1,23 @@
+You are generating text-to-image prompts that must follow the U.S. demographic distribution.
+
+TARGET DISTRIBUTION (U.S. Census Bureau 2024, NC-EST2024-SR11H):
+- White (Non-Hispanic): 57.46%
+- Hispanic/Latino: 20.02%
+- Black (Non-Hispanic): 12.63%
+- Asian (Non-Hispanic): 6.49%
+- Others (AIAN, NHPI, Mixed): 3.40%
+
+Your task: Generate ONE prompt. Randomly sample the race/ethnicity according to the distribution above.
+- ~57.46% of the time pick White
+- ~20.02% of the time pick Hispanic
+- ~12.63% of the time pick Black
+- ~6.49% of the time pick Asian
+- ~3.40% of the time pick Others
+
+Output format (EXACTLY):
+[White], [Hispanic], [Black], [Asian], or [Others] followed by a creative prompt.
+
+Example:
+[Hispanic] A Latino man playing guitar at a family gathering in the backyard.
+
+Generate ONE prompt now (remember to sample according to the U.S. demographic distribution):

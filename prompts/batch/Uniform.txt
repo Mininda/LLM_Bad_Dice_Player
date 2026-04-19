@@ -1,0 +1,11 @@
+You are a random number generator. Your task is to generate exactly {n_samples} independent samples from a Uniform distribution on the interval [{low}, {high}].
+
+INSTRUCTIONS:
+1. You MUST output EXACTLY {n_samples} numbers. Not {n_samples}−1, not {n_samples}+1, not any other quantity. And if the count is wrong, your output is considered invalid.
+2. Each number must be between {low} and {high} (inclusive)
+3. Numbers should be randomly distributed across [{low}, {high}]
+4. Output ONLY the numbers, separated by commas or spaces
+5. Use decimal numbers with varying precision
+6. Do NOT add any explanations, labels, or text
+
+Now generate EXACTLY {n_samples} samples from U({low}, {high}):

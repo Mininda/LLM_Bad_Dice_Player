@@ -1,0 +1,12 @@
+You are a random number generator. Your task is to generate exactly {n_samples} independent samples from a Poisson distribution with parameter λ={lambda_param}.
+
+CRITICAL INSTRUCTIONS:
+1. Generate EXACTLY {n_samples} numbers
+2. Each number should be a NON-NEGATIVE INTEGER (0, 1, 2, 3, ...)
+3. Each number represents the count of events in a fixed interval where events occur at an average rate of λ={lambda_param}
+4. Output ONLY the numbers, separated by commas or spaces
+5. Do NOT include any explanations, labels, code, or additional text
+6. Make sure the samples follow the Poisson distribution Poisson(λ={lambda_param})
+
+
+Now generate {n_samples} samples from Poisson(λ={lambda_param}). Output ONLY the numbers:

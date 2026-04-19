@@ -1,0 +1,21 @@
+{
+  "model": "Qwen3-32B",
+  "language": "English",
+  "temperature": 1.0,
+  "total_questions": 1021,
+  "successfully_parsed": 1000,
+  "parse_rate": 0.9794319294809011,
+  "distribution": {
+    "B": 356,
+    "C": 315,
+    "A": 218,
+    "D": 111
+  },
+  "percentages": {
+    "A": 21.8,
+    "B": 35.6,
+    "C": 31.5,
+    "D": 11.1
+  },
+  "timestamp": "2025-12-29T07:22:00.210313"
+}
