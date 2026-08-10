@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1500" height="750" viewBox="0 0 1500 750" role="img" aria-labelledby="title desc">
   <title id="title">MCQ correct-answer position distributions</title>
   <desc id="desc">Stacked bars compare answer positions A, B, C, and D for six language models against a uniform 25 percent target. Every model significantly deviates from uniform.</desc>
-  <rect width="1420" height="750" fill="#ffffff"/>
+  <rect width="1500" height="750" fill="#ffffff"/>
   <style>
     text { font-family: Arial, Helvetica, sans-serif; }
     .label { font-size: 24px; fill: #111827; }
