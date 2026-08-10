@@ -7,7 +7,8 @@
 **Minda Zhao · Yilun Du · Mengyu Wang**<br>
 **Harvard University**
 
-**ACL 2026 · Long Paper**
+<a href="https://2026.aclweb.org/"><img src="https://aclanthology.org/images/acl-logo.svg" alt="ACL logo" height="46"></a><br>
+**ACL 2026**
 
 The official implementation and data release for our ACL 2026 paper.
 
@@ -18,7 +19,7 @@ The official implementation and data release for our ACL 2026 paper.
 
 </div>
 
-## Citation
+## 📝 Citation
 
 If you use this code, the released prompts, or the data in your research, please cite our paper:
 
@@ -39,7 +40,7 @@ If you use this code, the released prompts, or the data in your research, please
 
 Machine-readable citation metadata are also available in [`CITATION.cff`](CITATION.cff).
 
-## Overview
+## 🔎 Overview
 
 Can a large language model natively sample from a specified probability distribution without calling an external numerical tool? We audit this capability at scale across **11 frontier LLMs**, **15 distributions**, and **1,000 samples per configuration**.
 
@@ -50,7 +51,7 @@ The benchmark separates two settings:
 
 The released benchmark uses Wasserstein-1 distance for distributional fidelity, two-sample Kolmogorov–Smirnov tests for continuous distributions, and chi-square goodness-of-fit tests for discrete distributions, with `alpha = 0.01`.
 
-### Main findings
+### 🔑 Main findings
 
 - Batch generation achieves only modest validity: the median model passes **7%** of the 15 distributions, and the strongest model passes **40%**.
 - Independent requests nearly collapse: **10 of 11 models pass none** of the distributions.
@@ -58,7 +59,7 @@ The released benchmark uses Wasserstein-1 distance for distributional fidelity, 
 - The same failure propagates into applications: all evaluated models show significant answer-position bias in MCQ generation and violate target distributions in attribute-constrained text-to-image prompt generation.
 - For applications requiring statistical guarantees, use an external, validated sampler rather than relying on native LLM sampling.
 
-### Main benchmark pass rates
+### 📊 Main benchmark pass rates
 
 | Model | Batch Generation | Independent Requests |
 |:--|--:|--:|
@@ -76,7 +77,17 @@ The released benchmark uses Wasserstein-1 distance for distributional fidelity, 
 
 A pass means that the corresponding statistical test does not reject the target distribution at `alpha = 0.01`. See Tables 2–3 and 9 in the paper for Wasserstein-1 distances and tier-level results.
 
-## Released artifacts
+### 🎯 MCQ answer-position bias
+
+For the downstream medical MCQ experiment, each model generated `N = 1000` questions under an explicit instruction to distribute correct answers uniformly across A/B/C/D. All six models still deviated significantly from the 25% target (`p < 0.001`).
+
+<div align="center">
+  <img src="assets/mcq_answer_position_bias.svg" alt="Stacked bar chart showing biased MCQ correct-answer positions for six language models compared with the uniform 25 percent target" width="100%">
+</div>
+
+The bars report the percentage of correct answers assigned to each option; the red crosses mark rejection of the uniform target. GPT-OSS-120B shows the strongest skew toward option C (54.6%), while GPT-4o favors option B (46.8%). See Table 4 in the paper.
+
+## 📦 Released artifacts
 
 This repository includes the code, exact prompt templates, raw model outputs, reference samples, and processed summaries used by the release:
 
@@ -107,6 +118,7 @@ data/
     downstream/downstream_results.json
 
 manifests/                  source and prompt provenance manifests
+assets/                     README figures
 docs/paper_contract.md      canonical reproducibility settings
 src/                        generation, parsing, metrics, and release checks
 scripts/validate_release.sh one-command local validation
@@ -118,7 +130,7 @@ For a quick look at the published results, start with:
 - [`data/processed/downstream/downstream_results.json`](data/processed/downstream/downstream_results.json) for MCQ and attribute-constrained generation.
 - [`docs/paper_contract.md`](docs/paper_contract.md) for the canonical experiment settings.
 
-## Quick start
+## 🚀 Quick start
 
 ```bash
 git clone https://github.com/Mininda/LLM_Bad_Dice_Player.git
@@ -134,7 +146,7 @@ bash scripts/validate_release.sh
 
 The validation command checks Python syntax, required release files, prompt counts, accidental secret patterns, processed-result structure, and the headline pass rates reported in the paper. It does not make API calls.
 
-## Re-running generation
+## 🔁 Re-running generation
 
 Generation requires credentials for the providers you use. The scripts read environment-variable names from [`configs/models.template.json`](configs/models.template.json); no credentials are stored in the repository.
 
@@ -146,7 +158,7 @@ export GEMINI_API_KEY=...
 
 Provider model identifiers and availability may change over time. Check `configs/models.template.json` before launching a new run and update only the relevant `api_model` or `base_url` entry when necessary.
 
-### Main distribution benchmark
+### 🎲 Main distribution benchmark
 
 Batch generation:
 
@@ -172,7 +184,7 @@ python src/generate_samples.py \
 
 Valid distribution keys are listed in [`configs/distributions.json`](configs/distributions.json). Valid model display names are listed in [`configs/models.template.json`](configs/models.template.json).
 
-### Downstream tasks
+### 🧩 Downstream tasks
 
 MCQ generation:
 
@@ -209,7 +221,7 @@ Other supported tasks are `independent_gender`, `independent_race`, and `indepen
 > [!IMPORTANT]
 > An independent run with `--n-samples 1000` makes 1,000 model API calls. Review provider pricing and rate limits before running large experiments.
 
-## Benchmark design
+## 🧪 Benchmark design
 
 | Tier | Distributions |
 |:--|:--|
@@ -219,10 +231,10 @@ Other supported tasks are `independent_gender`, `independent_race`, and `indepen
 
 All main experiments use `N = 1000`, `temperature = 1.0`, and `top_p = 1.0`. Reference samples use a fixed seed of `42`. The exact parameters and evaluation choices live in [`configs/`](configs/) rather than being duplicated in the runners.
 
-## Responsible use and scope
+## ⚠️ Responsible use and scope
 
 This benchmark evaluates explicitly specified one-dimensional distributions under standard decoding; it is not an impossibility result for future models or training paradigms. The downstream experiments are controlled demonstrations of sampling-induced bias, not comprehensive fairness evaluations. Do not treat native LLM outputs as statistically valid samples in fairness-, safety-, or decision-critical pipelines without independent validation.
 
-## Acknowledgement
+## 🙏 Acknowledgement
 
 The authors thank the maintainers of the model APIs and the open-source scientific Python ecosystem used to collect and evaluate this release.

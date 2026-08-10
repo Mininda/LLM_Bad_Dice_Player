@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="750" viewBox="0 0 1500 750" role="img" aria-labelledby="title desc">
+  <title id="title">MCQ correct-answer position distributions</title>
+  <desc id="desc">Stacked bars compare answer positions A, B, C, and D for six language models against a uniform 25 percent target. Every model significantly deviates from uniform.</desc>
+  <rect width="1420" height="750" fill="#ffffff"/>
+  <style>
+    text { font-family: Arial, Helvetica, sans-serif; }
+    .label { font-size: 24px; fill: #111827; }
+    .legend { font-size: 21px; font-weight: 700; fill: #111827; }
+    .pct { font-size: 20px; font-weight: 700; text-anchor: middle; dominant-baseline: middle; }
+    .chi { font-family: Georgia, serif; font-size: 20px; fill: #30343b; }
+    .tick { font-size: 20px; fill: #555b65; text-anchor: middle; }
+    .fail { font-size: 31px; font-weight: 700; fill: #b13b36; text-anchor: middle; }
+  </style>
+
+  <g transform="translate(80 0)">
+
+  <!-- Legend -->
+  <rect x="555" y="21" width="28" height="14" fill="#4f9b9c"/>
+  <text class="legend" x="595" y="36">A</text>
+  <rect x="655" y="21" width="28" height="14" fill="#e9c364"/>
+  <text class="legend" x="695" y="36">B</text>
+  <rect x="755" y="21" width="28" height="14" fill="#d9795c"/>
+  <text class="legend" x="795" y="36">C</text>
+  <rect x="855" y="21" width="28" height="14" fill="#5d7198"/>
+  <text class="legend" x="895" y="36">D</text>
+
+  <!-- 25/50/75 percent guides -->
+  <g stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="4 9" opacity="0.8">
+    <line x1="450" y1="55" x2="450" y2="680"/>
+    <line x1="700" y1="55" x2="700" y2="680"/>
+    <line x1="950" y1="55" x2="950" y2="680"/>
+  </g>
+
+  <!-- GPT-4o -->
+  <text class="label" x="160" y="109" text-anchor="end">GPT-4o</text>
+  <text class="fail" x="181" y="109">×</text>
+  <rect x="200" y="70" width="126" height="60" fill="#4f9b9c" stroke="#ffffff" stroke-width="2"/>
+  <rect x="326" y="70" width="468" height="60" fill="#e9c364" stroke="#ffffff" stroke-width="2"/>
+  <rect x="794" y="70" width="351" height="60" fill="#d9795c" stroke="#ffffff" stroke-width="2"/>
+  <rect x="1145" y="70" width="55" height="60" fill="#5d7198" stroke="#ffffff" stroke-width="2"/>
+  <text class="pct" x="263" y="100" fill="#ffffff">12.6</text>
+  <text class="pct" x="560" y="100" fill="#111111">46.8</text>
+  <text class="pct" x="969.5" y="100" fill="#ffffff">35.1</text>
+  <text class="pct" x="1172.5" y="100" fill="#ffffff">5.5</text>
+  <text class="chi" x="1230" y="108">χ² = 444.5</text>
+
+  <!-- Llama-3.3-70B -->
+  <text class="label" x="160" y="199" text-anchor="end">Llama-3.3-70B</text>
+  <text class="fail" x="181" y="199">×</text>
+  <rect x="200" y="160" width="172" height="60" fill="#4f9b9c" stroke="#ffffff" stroke-width="2"/>
+  <rect x="372" y="160" width="329" height="60" fill="#e9c364" stroke="#ffffff" stroke-width="2"/>
+  <rect x="701" y="160" width="429" height="60" fill="#d9795c" stroke="#ffffff" stroke-width="2"/>
+  <rect x="1130" y="160" width="70" height="60" fill="#5d7198" stroke="#ffffff" stroke-width="2"/>
+  <text class="pct" x="286" y="190" fill="#ffffff">17.2</text>
+  <text class="pct" x="536.5" y="190" fill="#111111">32.9</text>
+  <text class="pct" x="915.5" y="190" fill="#ffffff">42.9</text>
+  <text class="pct" x="1165" y="190" fill="#ffffff">7.0</text>
+  <text class="chi" x="1230" y="198">χ² = 307.1</text>
+
+  <!-- DeepSeek-V3.2 -->
+  <text class="label" x="160" y="289" text-anchor="end">DeepSeek-V3.2</text>
+  <text class="fail" x="181" y="289">×</text>
+  <rect x="200" y="250" width="169" height="60" fill="#4f9b9c" stroke="#ffffff" stroke-width="2"/>
+  <rect x="369" y="250" width="282" height="60" fill="#e9c364" stroke="#ffffff" stroke-width="2"/>
+  <rect x="651" y="250" width="368" height="60" fill="#d9795c" stroke="#ffffff" stroke-width="2"/>
+  <rect x="1019" y="250" width="181" height="60" fill="#5d7198" stroke="#ffffff" stroke-width="2"/>
+  <text class="pct" x="284.5" y="280" fill="#ffffff">16.9</text>
+  <text class="pct" x="510" y="280" fill="#111111">28.2</text>
+  <text class="pct" x="835" y="280" fill="#ffffff">36.8</text>
+  <text class="pct" x="1109.5" y="280" fill="#ffffff">18.1</text>
+  <text class="chi" x="1230" y="288">χ² = 105.1</text>
+
+  <!-- Qwen3-32B -->
+  <text class="label" x="160" y="379" text-anchor="end">Qwen3-32B</text>
+  <text class="fail" x="181" y="379">×</text>
+  <rect x="200" y="340" width="218" height="60" fill="#4f9b9c" stroke="#ffffff" stroke-width="2"/>
+  <rect x="418" y="340" width="356" height="60" fill="#e9c364" stroke="#ffffff" stroke-width="2"/>
+  <rect x="774" y="340" width="315" height="60" fill="#d9795c" stroke="#ffffff" stroke-width="2"/>
+  <rect x="1089" y="340" width="111" height="60" fill="#5d7198" stroke="#ffffff" stroke-width="2"/>
+  <text class="pct" x="309" y="370" fill="#ffffff">21.8</text>
+  <text class="pct" x="596" y="370" fill="#111111">35.6</text>
+  <text class="pct" x="931.5" y="370" fill="#ffffff">31.5</text>
+  <text class="pct" x="1144.5" y="370" fill="#ffffff">11.1</text>
+  <text class="chi" x="1230" y="378">χ² = 143.2</text>
+
+  <!-- Llama-4-Scout -->
+  <text class="label" x="160" y="469" text-anchor="end">Llama-4-Scout</text>
+  <text class="fail" x="181" y="469">×</text>
+  <rect x="200" y="430" width="286" height="60" fill="#4f9b9c" stroke="#ffffff" stroke-width="2"/>
+  <rect x="486" y="430" width="423" height="60" fill="#e9c364" stroke="#ffffff" stroke-width="2"/>
+  <rect x="909" y="430" width="227" height="60" fill="#d9795c" stroke="#ffffff" stroke-width="2"/>
+  <rect x="1136" y="430" width="64" height="60" fill="#5d7198" stroke="#ffffff" stroke-width="2"/>
+  <text class="pct" x="343" y="460" fill="#ffffff">28.6</text>
+  <text class="pct" x="697.5" y="460" fill="#111111">42.3</text>
+  <text class="pct" x="1022.5" y="460" fill="#ffffff">22.7</text>
+  <text class="pct" x="1168" y="460" fill="#ffffff">6.4</text>
+  <text class="chi" x="1230" y="468">χ² = 265.4</text>
+
+  <!-- GPT-OSS-120B -->
+  <text class="label" x="160" y="559" text-anchor="end">GPT-OSS-120B</text>
+  <text class="fail" x="181" y="559">×</text>
+  <rect x="200" y="520" width="45" height="60" fill="#4f9b9c" stroke="#ffffff" stroke-width="2"/>
+  <rect x="245" y="520" width="277" height="60" fill="#e9c364" stroke="#ffffff" stroke-width="2"/>
+  <rect x="522" y="520" width="546" height="60" fill="#d9795c" stroke="#ffffff" stroke-width="2"/>
+  <rect x="1068" y="520" width="132" height="60" fill="#5d7198" stroke="#ffffff" stroke-width="2"/>
+  <text class="pct" x="222.5" y="550" fill="#ffffff" style="font-size: 17px">4.5</text>
+  <text class="pct" x="383.5" y="550" fill="#111111">27.7</text>
+  <text class="pct" x="795" y="550" fill="#ffffff">54.6</text>
+  <text class="pct" x="1134" y="550" fill="#ffffff">13.2</text>
+  <text class="chi" x="1230" y="558">χ² = 577.2</text>
+
+  <!-- Uniform target -->
+  <text class="label" x="160" y="649" text-anchor="end">Uniform</text>
+  <rect x="200" y="610" width="250" height="60" fill="#4f9b9c" stroke="#ffffff" stroke-width="2"/>
+  <rect x="450" y="610" width="250" height="60" fill="#e9c364" stroke="#ffffff" stroke-width="2"/>
+  <rect x="700" y="610" width="250" height="60" fill="#d9795c" stroke="#ffffff" stroke-width="2"/>
+  <rect x="950" y="610" width="250" height="60" fill="#5d7198" stroke="#ffffff" stroke-width="2"/>
+  <text class="pct" x="325" y="640" fill="#ffffff">25.0</text>
+  <text class="pct" x="575" y="640" fill="#111111">25.0</text>
+  <text class="pct" x="825" y="640" fill="#ffffff">25.0</text>
+  <text class="pct" x="1075" y="640" fill="#ffffff">25.0</text>
+  <text class="legend" x="1230" y="648" fill="#6b7280">Target</text>
+
+  <!-- Axis -->
+  <text class="tick" x="200" y="718">0</text>
+  <text class="tick" x="450" y="718">25</text>
+  <text class="tick" x="700" y="718">50</text>
+  <text class="tick" x="950" y="718">75</text>
+  <text class="tick" x="1200" y="718">100</text>
+  </g>
+</svg>
