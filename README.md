@@ -7,8 +7,7 @@
 **Minda Zhao · Yilun Du · Mengyu Wang**<br>
 **Harvard University**
 
-<a href="https://2026.aclweb.org/"><img src="https://aclanthology.org/images/acl-logo.svg" alt="ACL logo" height="46"></a><br>
-**ACL 2026**
+<a href="https://2026.aclweb.org/"><img src="https://aclanthology.org/images/acl-logo.svg" alt="ACL logo" height="18"></a> **ACL 2026**
 
 The official implementation and data release for our ACL 2026 paper.
 
@@ -76,6 +75,16 @@ The released benchmark uses Wasserstein-1 distance for distributional fidelity, 
 | GPT-OSS | 13% | 0% |
 
 A pass means that the corresponding statistical test does not reject the target distribution at `alpha = 0.01`. See Tables 2–3 and 9 in the paper for Wasserstein-1 distances and tier-level results.
+
+### 🌡️ Wasserstein-1 results
+
+Each cell reports Wasserstein-1 distance (lower is better); circles mark configurations that pass the corresponding statistical test at `alpha = 0.01`. Colors use a logarithmic scale.
+
+<div align="center">
+  <img src="assets/batch_generation_w1_heatmap.png" alt="Wasserstein-1 heatmap for Batch Generation across 11 models and 15 probability distributions" width="100%">
+  <br>
+  <img src="assets/independent_requests_w1_heatmap.png" alt="Wasserstein-1 heatmap for Independent Requests across 11 models and 15 probability distributions" width="100%">
+</div>
 
 ### 🎯 MCQ answer-position bias
 
@@ -231,10 +240,6 @@ Other supported tasks are `independent_gender`, `independent_race`, and `indepen
 
 All main experiments use `N = 1000`, `temperature = 1.0`, and `top_p = 1.0`. Reference samples use a fixed seed of `42`. The exact parameters and evaluation choices live in [`configs/`](configs/) rather than being duplicated in the runners.
 
-## ⚠️ Responsible use and scope
+## 🏷️ License
 
-This benchmark evaluates explicitly specified one-dimensional distributions under standard decoding; it is not an impossibility result for future models or training paradigms. The downstream experiments are controlled demonstrations of sampling-induced bias, not comprehensive fairness evaluations. Do not treat native LLM outputs as statistically valid samples in fairness-, safety-, or decision-critical pipelines without independent validation.
-
-## 🙏 Acknowledgement
-
-The authors thank the maintainers of the model APIs and the open-source scientific Python ecosystem used to collect and evaluate this release.
+This repository is released under the [Apache License 2.0](LICENSE).

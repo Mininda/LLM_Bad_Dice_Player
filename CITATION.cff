@@ -17,6 +17,7 @@ abstract: >-
   ACL 2026 paper Large Language Models Are Bad Dice Players: LLMs Struggle to
   Generate Random Numbers from Statistical Distributions.
 date-released: "2026-04-18"
+license: Apache-2.0
 repository-code: "https://github.com/Mininda/LLM_Bad_Dice_Player"
 url: "https://aclanthology.org/2026.acl-long.1051/"
 keywords:
