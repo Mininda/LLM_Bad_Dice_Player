@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="170" height="36" viewBox="0 0 170 36" role="img" aria-labelledby="title desc">
+  <title id="title">ACL 2026</title>
+  <desc id="desc">Association for Computational Linguistics 2026 conference badge</desc>
+  <rect x="0.5" y="0.5" width="169" height="35" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+  <g transform="translate(34.2 10) scale(0.347826)" fill="#ed1c24">
+    <path d="M41.9776 0H7.4869H0V7.485V38.4787V46H7.4869H49.5008H56.9877H68V30.9937H56.9877V10.5008V3.0158V0H41.9776ZM15.0102 17.9858H41.9776V30.9937H15.0102V17.9858Z"/>
+  </g>
+  <text x="65.85" y="23.6" textLength="70" lengthAdjust="spacingAndGlyphs"
+        fill="#1f2328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="17" font-weight="600">ACL 2026</text>
+</svg>

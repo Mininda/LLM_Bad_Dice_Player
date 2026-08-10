@@ -7,7 +7,7 @@
 **Minda Zhao · Yilun Du · Mengyu Wang**<br>
 **Harvard University**
 
-<a href="https://2026.aclweb.org/"><img src="https://aclanthology.org/images/acl-logo.svg" alt="ACL logo" height="18"></a> **ACL 2026**
+<a href="https://2026.aclweb.org/"><img src="assets/acl_2026_lockup.svg" alt="ACL 2026" width="170"></a>
 
 The official implementation and data release for our ACL 2026 paper.
 
