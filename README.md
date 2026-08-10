@@ -1,74 +1,142 @@
-# Large Language Models Are Bad Dice Players
+<div align="center">
 
-Code, prompts, and released data for the ACL Main 2026 paper:
+# 🎲 Large Language Models Are Bad Dice Players
 
-**Large Language Models Are Bad Dice Players: LLMs Struggle to Generate Random Numbers from Statistical Distributions**
+### LLMs Struggle to Generate Random Numbers from Statistical Distributions
 
-## File structure
+**Minda Zhao · Yilun Du · Mengyu Wang**<br>
+**Harvard University**
+
+**ACL 2026 · Long Paper**
+
+The official implementation and data release for our ACL 2026 paper.
+
+[**Paper**](https://aclanthology.org/2026.acl-long.1051/) |
+[**PDF**](https://aclanthology.org/2026.acl-long.1051.pdf) |
+[**DOI**](https://doi.org/10.18653/v1/2026.acl-long.1051) |
+[**Code & Data**](https://github.com/Mininda/LLM_Bad_Dice_Player)
+
+</div>
+
+## Citation
+
+If you use this code, the released prompts, or the data in your research, please cite our paper:
+
+```bibtex
+@inproceedings{zhao-etal-2026-large,
+    title = "Large Language Models Are Bad Dice Players: {LLM}s Struggle to Generate Random Numbers from Statistical Distributions",
+    author = "Zhao, Minda and Du, Yilun and Wang, Mengyu",
+    booktitle = "Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2026",
+    address = "San Diego, California, United States",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.acl-long.1051/",
+    doi = "10.18653/v1/2026.acl-long.1051",
+    pages = "22942--22959"
+}
+```
+
+Machine-readable citation metadata are also available in [`CITATION.cff`](CITATION.cff).
+
+## Overview
+
+Can a large language model natively sample from a specified probability distribution without calling an external numerical tool? We audit this capability at scale across **11 frontier LLMs**, **15 distributions**, and **1,000 samples per configuration**.
+
+The benchmark separates two settings:
+
+- **Batch Generation:** one response contains all 1,000 requested samples.
+- **Independent Requests:** 1,000 stateless calls each produce one sample.
+
+The released benchmark uses Wasserstein-1 distance for distributional fidelity, two-sample Kolmogorov–Smirnov tests for continuous distributions, and chi-square goodness-of-fit tests for discrete distributions, with `alpha = 0.01`.
+
+### Main findings
+
+- Batch generation achieves only modest validity: the median model passes **7%** of the 15 distributions, and the strongest model passes **40%**.
+- Independent requests nearly collapse: **10 of 11 models pass none** of the distributions.
+- Sampling fidelity worsens as distributional complexity and the sampling horizon increase.
+- The same failure propagates into applications: all evaluated models show significant answer-position bias in MCQ generation and violate target distributions in attribute-constrained text-to-image prompt generation.
+- For applications requiring statistical guarantees, use an external, validated sampler rather than relying on native LLM sampling.
+
+### Main benchmark pass rates
+
+| Model | Batch Generation | Independent Requests |
+|:--|--:|--:|
+| GPT-5.2 | 13% | 0% |
+| Gemini-3 | 13% | 0% |
+| **GPT-4o** | **40%** | 0% |
+| DeepSeek-V3.2 | 7% | 0% |
+| Qwen3 | 0% | 0% |
+| Gemma-3 | 7% | 0% |
+| Mistral-3.2 | 0% | 0% |
+| Kimi-K2 | 20% | 0% |
+| Llama-3.3 | 0% | 0% |
+| Llama-4 | 7% | **7%** |
+| GPT-OSS | 13% | 0% |
+
+A pass means that the corresponding statistical test does not reject the target distribution at `alpha = 0.01`. See Tables 2–3 and 9 in the paper for Wasserstein-1 distances and tier-level results.
+
+## Released artifacts
+
+This repository includes the code, exact prompt templates, raw model outputs, reference samples, and processed summaries used by the release:
 
 ```text
 configs/
-  distributions.json        distribution definitions used in the main benchmark
-  protocols.json            batch / independent protocol settings
-  evaluation.json           evaluation settings
-  models.template.json      model registry without secrets
-  downstream_tasks.json     downstream task settings
+  distributions.json        distribution definitions and paper parameters
+  protocols.json            batch, independent, and sample-size settings
+  evaluation.json           tests, metrics, alpha, and reference seed
+  models.template.json      model registry without credentials
+  downstream_tasks.json     MCQ and attribute-task settings
 
 prompts/
-  batch/                    batch prompts for the main benchmark
-  independent/              independent prompts for the main benchmark
-  downstream/               prompts for MCQ and downstream attribute tasks
+  batch/                    15 batch-generation prompts
+  independent/              15 independent-request prompts
+  downstream/               MCQ and attribute-generation prompts
 
 data/
   raw_results/
-    batch/                  released main benchmark batch outputs
-    independent/            released main benchmark independent outputs
-    reference/              reference samples used for evaluation
+    batch/                  released batch outputs
+    independent/            released independent-request outputs
+  reference/                aligned NumPy/SciPy reference samples
   downstream/
     mcq/raw_outputs/        released MCQ outputs
-    attributes/joint/       released joint attribute outputs
+    attributes/joint/       released joint-attribute outputs
     attributes/independent/ released single-attribute outputs
   processed/
     recomputed_main_results.json
     downstream/downstream_results.json
 
-src/
-  generate_samples.py       generate main benchmark raw outputs
-  generate_downstream.py    generate downstream raw outputs
-  verify_release.py         release checks
-
-scripts/
-  validate_release.sh
+manifests/                  source and prompt provenance manifests
+docs/paper_contract.md      canonical reproducibility settings
+src/                        generation, parsing, metrics, and release checks
+scripts/validate_release.sh one-command local validation
 ```
 
-## Existing data
+For a quick look at the published results, start with:
 
-Released raw data already included in the repository:
+- [`data/processed/recomputed_main_results.json`](data/processed/recomputed_main_results.json) for the main batch and independent benchmark.
+- [`data/processed/downstream/downstream_results.json`](data/processed/downstream/downstream_results.json) for MCQ and attribute-constrained generation.
+- [`docs/paper_contract.md`](docs/paper_contract.md) for the canonical experiment settings.
 
-- `data/raw_results/batch/`
-- `data/raw_results/independent/`
-- `data/downstream/mcq/raw_outputs/`
-- `data/downstream/attributes/joint/`
-- `data/downstream/attributes/independent/`
+## Quick start
 
-Processed JSON summaries:
+```bash
+git clone https://github.com/Mininda/LLM_Bad_Dice_Player.git
+cd LLM_Bad_Dice_Player
 
-- `data/processed/recomputed_main_results.json`
-- `data/processed/downstream/downstream_results.json`
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+
+bash scripts/validate_release.sh
+```
+
+The validation command checks Python syntax, required release files, prompt counts, accidental secret patterns, processed-result structure, and the headline pass rates reported in the paper. It does not make API calls.
 
 ## Re-running generation
 
-### 1. Install dependencies
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
-
-### 2. Set API keys
-
-The generation scripts read credentials from environment variables defined in `configs/models.template.json`.
+Generation requires credentials for the providers you use. The scripts read environment-variable names from [`configs/models.template.json`](configs/models.template.json); no credentials are stored in the repository.
 
 ```bash
 export OPENAI_API_KEY=...
@@ -76,9 +144,11 @@ export DEEPINFRA_API_KEY=...
 export GEMINI_API_KEY=...
 ```
 
-### 3. Run generation
+Provider model identifiers and availability may change over time. Check `configs/models.template.json` before launching a new run and update only the relevant `api_model` or `base_url` entry when necessary.
 
-Main benchmark, batch mode:
+### Main distribution benchmark
+
+Batch generation:
 
 ```bash
 python src/generate_samples.py \
@@ -89,7 +159,7 @@ python src/generate_samples.py \
   --output-dir outputs/main
 ```
 
-Main benchmark, independent mode:
+Independent requests:
 
 ```bash
 python src/generate_samples.py \
@@ -100,7 +170,11 @@ python src/generate_samples.py \
   --output-dir outputs/main
 ```
 
-Downstream MCQ:
+Valid distribution keys are listed in [`configs/distributions.json`](configs/distributions.json). Valid model display names are listed in [`configs/models.template.json`](configs/models.template.json).
+
+### Downstream tasks
+
+MCQ generation:
 
 ```bash
 python src/generate_downstream.py \
@@ -110,7 +184,7 @@ python src/generate_downstream.py \
   --output-dir outputs/downstream
 ```
 
-Downstream joint attributes:
+Joint attribute-constrained prompt generation:
 
 ```bash
 python src/generate_downstream.py \
@@ -120,7 +194,7 @@ python src/generate_downstream.py \
   --output-dir outputs/downstream
 ```
 
-Downstream single attribute:
+Single-attribute follow-up:
 
 ```bash
 python src/generate_downstream.py \
@@ -130,15 +204,25 @@ python src/generate_downstream.py \
   --output-dir outputs/downstream
 ```
 
-### 4. Output directories
+Other supported tasks are `independent_gender`, `independent_race`, and `independent_color`. The downstream runner uses 32 concurrent workers by default; reduce this with `--max-workers` if required by your provider's rate limits.
 
-Newly generated raw outputs are written to:
+> [!IMPORTANT]
+> An independent run with `--n-samples 1000` makes 1,000 model API calls. Review provider pricing and rate limits before running large experiments.
 
-- `outputs/main/`
-- `outputs/downstream/`
+## Benchmark design
 
-## Validation
+| Tier | Distributions |
+|:--|:--|
+| Tier I — fundamental | Uniform, Gaussian, Bernoulli |
+| Tier II — bounded/counting | Beta, Binomial, Poisson, Exponential |
+| Tier III — heavy-tailed/complex | Cauchy, Student's t, Chi-Square, F-Distribution, Gamma, Weibull, Laplace, Logistic |
 
-```bash
-bash scripts/validate_release.sh
-```
+All main experiments use `N = 1000`, `temperature = 1.0`, and `top_p = 1.0`. Reference samples use a fixed seed of `42`. The exact parameters and evaluation choices live in [`configs/`](configs/) rather than being duplicated in the runners.
+
+## Responsible use and scope
+
+This benchmark evaluates explicitly specified one-dimensional distributions under standard decoding; it is not an impossibility result for future models or training paradigms. The downstream experiments are controlled demonstrations of sampling-induced bias, not comprehensive fairness evaluations. Do not treat native LLM outputs as statistically valid samples in fairness-, safety-, or decision-critical pipelines without independent validation.
+
+## Acknowledgement
+
+The authors thank the maintainers of the model APIs and the open-source scientific Python ecosystem used to collect and evaluate this release.
