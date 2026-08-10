@@ -1,16 +1,45 @@
 cff-version: 1.2.0
-title: "Large Language Models Are Bad Dice Players: LLMs Struggle to Generate Random Numbers from Statistical Distributions"
-message: "If you use this repository, please cite the paper."
+message: "If you use this software or its released data, please cite the paper in preferred-citation."
+title: "LLM Bad Dice Player"
 type: software
 authors:
   - family-names: Zhao
     given-names: Minda
+    affiliation: "Harvard University"
   - family-names: Du
     given-names: Yilun
+    affiliation: "Harvard University"
   - family-names: Wang
     given-names: Mengyu
-repository-code: "https://github.com/<your-org-or-user>/<your-repo>"
+    affiliation: "Harvard University"
 abstract: >-
-  Code, prompt templates, and released data for the main distribution-sampling benchmark
-  and downstream experiments reported in the paper.
-date-released: 2026-04-18
+  Official code, prompt templates, reference samples, and released results for the
+  ACL 2026 paper Large Language Models Are Bad Dice Players: LLMs Struggle to
+  Generate Random Numbers from Statistical Distributions.
+date-released: "2026-04-18"
+repository-code: "https://github.com/Mininda/LLM_Bad_Dice_Player"
+url: "https://aclanthology.org/2026.acl-long.1051/"
+keywords:
+  - large language models
+  - random number generation
+  - probability distributions
+  - statistical testing
+  - sampling bias
+preferred-citation:
+  type: conference-paper
+  title: "Large Language Models Are Bad Dice Players: LLMs Struggle to Generate Random Numbers from Statistical Distributions"
+  authors:
+    - family-names: Zhao
+      given-names: Minda
+    - family-names: Du
+      given-names: Yilun
+    - family-names: Wang
+      given-names: Mengyu
+  collection-title: "Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)"
+  conference:
+    name: "The 64th Annual Meeting of the Association for Computational Linguistics"
+  year: 2026
+  start: 22942
+  end: 22959
+  doi: "10.18653/v1/2026.acl-long.1051"
+  url: "https://aclanthology.org/2026.acl-long.1051/"
